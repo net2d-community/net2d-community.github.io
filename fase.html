@@ -6,6 +6,18 @@
   <title>Fase · Net2d</title>
   <meta name="description" content="Detalhes de uma fase da trajetoria de pesquisa do ecossistema Net2d: objetivos, ferramentas desenvolvidas, resultados e encaixe no trabalho como um todo." />
   <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    /* aplica o tema antes da pintura para evitar flash */
+    (function () {
+      try {
+        var t = localStorage.getItem("net2d-theme");
+        if (t !== "light" && t !== "dark") {
+          t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) ? "light" : "dark";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -17,7 +29,10 @@
         <a id="nav-timeline" href="index.html#timeline">Trajetoria</a>
         <a id="nav-product" href="index.html#product">Produto final</a>
       </nav>
-      <div id="lang-switch" class="lang-switch" aria-label="Idioma"></div>
+      <div class="header-controls">
+        <div id="lang-switch" class="lang-switch" aria-label="Idioma"></div>
+        <div id="theme-toggle"></div>
+      </div>
     </div>
   </header>
 

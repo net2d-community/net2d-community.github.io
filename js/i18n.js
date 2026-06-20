@@ -42,6 +42,42 @@ function buildLangSwitcher(target, current, onChange) {
   });
 }
 
+/* ----------------------------- Tema (claro/escuro) ----------------------------- */
+const THEME_KEY = "net2d-theme";
+
+function getTheme() {
+  const stored = localStorage.getItem(THEME_KEY);
+  if (stored === "light" || stored === "dark") return stored;
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) return "light";
+  return "dark";
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem(THEME_KEY, theme);
+}
+
+/* Constroi o botao de alternancia de tema. labels: {light, dark} para aria-label. */
+function buildThemeToggle(target, labels) {
+  target.innerHTML = "";
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "theme-toggle";
+  btn.innerHTML = '<span class="icon-moon" aria-hidden="true">☾</span><span class="icon-sun" aria-hidden="true">☀</span>';
+  function refresh() {
+    const cur = document.documentElement.getAttribute("data-theme") || getTheme();
+    btn.setAttribute("aria-label", cur === "light" ? labels.dark : labels.light);
+    btn.title = cur === "light" ? labels.dark : labels.light;
+  }
+  refresh();
+  btn.addEventListener("click", function () {
+    const cur = document.documentElement.getAttribute("data-theme") || getTheme();
+    applyTheme(cur === "light" ? "dark" : "light");
+    refresh();
+  });
+  target.appendChild(btn);
+}
+
 /* Helpers de criacao de elementos para reduzir verbosidade. */
 function el(tag, opts) {
   opts = opts || {};

@@ -21,6 +21,9 @@
   --radius-sm: 9px;
   --maxw: 1140px;
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.38);
+  --header-bg: rgba(11, 16, 32, 0.78);
+  --glow-1: rgba(56, 189, 248, 0.10);
+  --glow-2: rgba(129, 140, 248, 0.10);
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --mono: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
 
@@ -31,7 +34,47 @@
   --p4: #a78bfa;
   --p5: #34d399;
   --p6: #fbbf24;
+
+  /* superficie do hero/arte de capa (adapta ao tema) */
+  --art-bg: #0e1530;
+  --art-node: #1a2444;
+  --art-stroke: #2c375a;
 }
+
+/* ----------------------------- Tema claro ----------------------------- */
+html[data-theme="light"] {
+  --bg: #f5f8fd;
+  --bg-soft: #eef3fb;
+  --bg-card: #ffffff;
+  --bg-card-2: #f1f5fc;
+  --border: #d8e0ee;
+  --border-soft: #e7ecf6;
+  --text: #0f1830;
+  --text-soft: #45506c;
+  --text-dim: #6a7693;
+  --accent: #0284c7;
+  --accent-2: #6366f1;
+  --accent-3: #059669;
+  --shadow: 0 16px 40px rgba(30, 50, 90, 0.14);
+  --header-bg: rgba(245, 248, 253, 0.82);
+  --glow-1: rgba(56, 189, 248, 0.14);
+  --glow-2: rgba(129, 140, 248, 0.12);
+  /* cores de fase levemente escurecidas para legibilidade em fundo claro */
+  --p1: #0ea5e9;
+  --p2: #0891b2;
+  --p3: #db2777;
+  --p4: #7c3aed;
+  --p5: #059669;
+  --p6: #d97706;
+  /* arte de capa permanece com superficie clara propria */
+  --art-bg: #eef3fb;
+  --art-node: #ffffff;
+  --art-stroke: #cdd8ec;
+}
+
+/* o painel do diagrama de arquitetura usa cores fixas no SVG:
+   mantemos um fundo escuro nos dois temas para consistencia visual */
+.arch-wrap { --diagram-fixed: 1; }
 
 * { box-sizing: border-box; }
 
@@ -41,12 +84,13 @@ body {
   margin: 0;
   font-family: var(--font);
   background:
-    radial-gradient(1100px 600px at 78% -8%, rgba(56, 189, 248, 0.10), transparent 60%),
-    radial-gradient(900px 600px at 8% 8%, rgba(129, 140, 248, 0.10), transparent 55%),
+    radial-gradient(1100px 600px at 78% -8%, var(--glow-1), transparent 60%),
+    radial-gradient(900px 600px at 8% 8%, var(--glow-2), transparent 55%),
     var(--bg);
   color: var(--text);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  transition: background-color .25s ease, color .25s ease;
 }
 
 a { color: var(--accent); text-decoration: none; }
@@ -58,7 +102,7 @@ a:hover { text-decoration: underline; }
 .site-header {
   position: sticky; top: 0; z-index: 50;
   backdrop-filter: blur(12px);
-  background: rgba(11, 16, 32, 0.78);
+  background: var(--header-bg);
   border-bottom: 1px solid var(--border-soft);
 }
 .header-inner {
@@ -90,7 +134,29 @@ a:hover { text-decoration: underline; }
 .lang-btn:hover { color: var(--text); }
 .lang-btn.is-active { color: #06121f; background: var(--accent); }
 
+.header-controls { display: flex; align-items: center; gap: 10px; }
+.theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 34px; border-radius: 9px; cursor: pointer;
+  background: var(--bg-soft); border: 1px solid var(--border); color: var(--text-soft);
+  font-size: 1rem; transition: color .15s ease, border-color .15s ease;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--accent); }
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: inline; }
+html[data-theme="light"] .theme-toggle .icon-sun { display: inline; }
+html[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
 .nav-toggle { display: none; }
+
+/* ----------------------------- Video ----------------------------- */
+.video-frame {
+  position: relative; width: 100%; padding-top: 56.25%; /* 16:9 */
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+}
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-wrap { max-width: 860px; margin: 0 auto; }
 
 /* ----------------------------- Hero ----------------------------- */
 .hero { padding: 74px 0 38px; }
@@ -106,6 +172,23 @@ a:hover { text-decoration: underline; }
   background: linear-gradient(180deg, #fff 30%, #c7d2fe);
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
+html[data-theme="light"] .hero h1 {
+  background: linear-gradient(180deg, #0f1830 20%, #2a3a7a);
+  -webkit-background-clip: text; background-clip: text;
+}
+
+/* hero em duas colunas com a figura de capa */
+.hero-grid { display: grid; grid-template-columns: 1.25fr 0.9fr; gap: 38px; align-items: center; }
+.hero-art-card {
+  background: var(--art-bg); border: 1px solid var(--border); border-radius: 18px;
+  padding: 18px; box-shadow: var(--shadow);
+}
+.hero-art { display: block; width: 100%; height: auto; }
+.ha-card { fill: var(--art-node); stroke: var(--art-stroke); }
+.ha-track { stroke: var(--art-stroke); }
+.ha-label { fill: var(--text-soft); font-size: 12px; font-family: var(--mono); }
+.ha-title { fill: var(--text); font-size: 13.5px; font-weight: 700; }
+.ha-flow { stroke: var(--accent); }
 .hero .subtitle { font-size: clamp(1.05rem, 2.2vw, 1.35rem); color: var(--text-soft); max-width: 50ch; margin: 0 0 22px; }
 .hero .byline { display: flex; flex-wrap: wrap; gap: 6px 18px; color: var(--text-dim); font-size: 0.95rem; margin-bottom: 26px; }
 .hero .byline strong { color: var(--text); font-weight: 650; }
@@ -145,9 +228,10 @@ section { padding: 46px 0; }
 .axis-arrow { text-align: center; color: var(--accent); font-size: 1.4rem; line-height: 1; }
 
 /* ----------------------------- Architecture ----------------------------- */
+/* fundo escuro fixo: o SVG usa cores hex fixas e fica legivel nos dois temas */
 .arch-wrap {
-  background: linear-gradient(180deg, var(--bg-soft), var(--bg-card));
-  border: 1px solid var(--border); border-radius: var(--radius);
+  background: linear-gradient(180deg, #111830, #151d38);
+  border: 1px solid #26304f; border-radius: var(--radius);
   padding: 18px; box-shadow: var(--shadow); overflow-x: auto;
 }
 .arch-svg { display: block; width: 100%; height: auto; min-width: 720px; }
@@ -273,6 +357,8 @@ section { padding: 46px 0; }
   .phase-grid { grid-template-columns: 1fr; }
   .note-cards { grid-template-columns: 1fr; }
   .nav { display: none; }
+  .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+  .hero-art-card { order: -1; max-width: 460px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

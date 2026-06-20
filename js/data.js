@@ -16,10 +16,14 @@ const REPOS = {
   org: "https://github.com/orgs/net2d-community/repositories"
 };
 
+/* Video de apresentacao do Net2d (YouTube). */
+const VIDEO_ID = "kPi7YJsS7k0";
+
 const SITE = {
   /* =========================== PORTUGUES =========================== */
   pt: {
     meta: { lang: "pt", label: "PT", dir: "ltr" },
+    theme: { light: "Mudar para tema claro", dark: "Mudar para tema escuro" },
     nav: {
       brand: "Net2d",
       home: "Inicio",
@@ -49,6 +53,10 @@ const SITE = {
       archChainTitle: "A cadeia conceitual",
       timelineTitle: "Trajetoria em seis fases",
       timelineLede: "Da automacao baseada em Fonte de Verdade da Rede ate o benchmark semantico reprodutivel. Escolha uma fase para ver objetivos, ferramentas e resultados.",
+      videoTitle: "Net2d em acao",
+      videoLede: "Apresentacao em video do laboratorio Net2d, mostrando a automacao de dispositivos a partir da Fonte de Verdade da Rede.",
+      heroArtDesired: "Estado desejado",
+      heroArtOperational: "Estado operacional",
       threeMovesTitle: "Tres movimentos complementares",
       threeMoves: [
         { t: "Arquitetural", d: "De uma integracao com a Fonte de Verdade da Rede para uma arquitetura modular de servicos especializados." },
@@ -93,6 +101,7 @@ const SITE = {
   /* =========================== ESPANOL =========================== */
   es: {
     meta: { lang: "es", label: "ES", dir: "ltr" },
+    theme: { light: "Cambiar a tema claro", dark: "Cambiar a tema oscuro" },
     nav: {
       brand: "Net2d",
       home: "Inicio",
@@ -122,6 +131,10 @@ const SITE = {
       archChainTitle: "La cadena conceptual",
       timelineTitle: "Trayectoria en seis fases",
       timelineLede: "De la automatizacion basada en Fuente de Verdad de la Red hasta el benchmark semantico reproducible. Elige una fase para ver objetivos, herramientas y resultados.",
+      videoTitle: "Net2d en accion",
+      videoLede: "Presentacion en video del laboratorio Net2d, mostrando la automatizacion de dispositivos a partir de la Fuente de Verdad de la Red.",
+      heroArtDesired: "Estado deseado",
+      heroArtOperational: "Estado operacional",
       threeMovesTitle: "Tres movimientos complementarios",
       threeMoves: [
         { t: "Arquitectonico", d: "De una integracion con la Fuente de Verdad de la Red a una arquitectura modular de servicios especializados." },
@@ -166,6 +179,7 @@ const SITE = {
   /* =========================== ENGLISH =========================== */
   en: {
     meta: { lang: "en", label: "EN", dir: "ltr" },
+    theme: { light: "Switch to light theme", dark: "Switch to dark theme" },
     nav: {
       brand: "Net2d",
       home: "Home",
@@ -195,6 +209,10 @@ const SITE = {
       archChainTitle: "The conceptual chain",
       timelineTitle: "A journey in six phases",
       timelineLede: "From Source-of-Truth-based automation to a reproducible semantic benchmark. Pick a phase to see its goals, tools and results.",
+      videoTitle: "Net2d in action",
+      videoLede: "Video presentation of the Net2d lab, showing device automation driven by the Network Source of Truth.",
+      heroArtDesired: "Desired state",
+      heroArtOperational: "Operational state",
       threeMovesTitle: "Three complementary movements",
       threeMoves: [
         { t: "Architectural", d: "From an integration with the Network Source of Truth to a modular architecture of specialized services." },

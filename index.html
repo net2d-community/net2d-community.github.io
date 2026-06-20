@@ -9,6 +9,18 @@
   <meta property="og:description" content="Ecossistema modular para automacao observavel e reprodutivel de redes heterogeneas. Mestrado de Jeronimo Menezes (UNIPAMPA)." />
   <meta property="og:type" content="website" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    /* aplica o tema antes da pintura para evitar flash */
+    (function () {
+      try {
+        var t = localStorage.getItem("net2d-theme");
+        if (t !== "light" && t !== "dark") {
+          t = (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches) ? "light" : "dark";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -20,7 +32,10 @@
         <a id="nav-timeline" href="#timeline">Trajetoria</a>
         <a id="nav-product" href="#product">Produto final</a>
       </nav>
-      <div id="lang-switch" class="lang-switch" aria-label="Idioma"></div>
+      <div class="header-controls">
+        <div id="lang-switch" class="lang-switch" aria-label="Idioma"></div>
+        <div id="theme-toggle"></div>
+      </div>
     </div>
   </header>
 

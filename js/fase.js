@@ -145,6 +145,7 @@
       history.replaceState(null, "", "fase.html?id=" + id + "&lang=" + newLang);
       render(newLang);
     });
+    buildThemeToggle(document.getElementById("theme-toggle"), S.theme);
   }
 
   document.addEventListener("DOMContentLoaded", function () {

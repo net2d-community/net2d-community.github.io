@@ -183,6 +183,55 @@
     return root;
   }
 
+  /* ---- Figura de capa do hero (adapta ao tema via classes CSS) ---- */
+  function buildHeroArt(lang) {
+    const S = SITE[lang].home;
+    const W = 460, H = 380;
+    const root = svg("svg", { viewBox: "0 0 " + W + " " + H, class: "hero-art", role: "img", "aria-label": "Net2d" });
+
+    const defs = svg("defs");
+    const m = svg("marker", { id: "ha-arrow", viewBox: "0 0 10 10", refX: "8", refY: "5", markerWidth: "6", markerHeight: "6", orient: "auto-start-reverse" });
+    m.appendChild(svg("path", { d: "M0,0 L10,5 L0,10 z", fill: "#38bdf8" }));
+    defs.appendChild(m);
+    root.appendChild(defs);
+
+    // chips topo/baixo (estado desejado / operacional)
+    function chip(y, label, dotColor) {
+      const g = svg("g");
+      g.appendChild(svg("rect", { x: 70, y: y, width: 320, height: 44, rx: 12, class: "ha-card" }));
+      g.appendChild(svg("circle", { cx: 96, cy: y + 22, r: 7, fill: dotColor }));
+      const t = svgText(116, y + 27, label, { class: "ha-title" });
+      g.appendChild(t);
+      root.appendChild(g);
+    }
+    chip(20, S.heroArtDesired, "#38bdf8");
+    chip(316, S.heroArtOperational, "#34d399");
+
+    // pilha de servicos no meio
+    const services = [
+      { y: 100, name: "net2d", sub: "orquestrador" },
+      { y: 162, name: "nsot2dsm  ·  dsm2cli  ·  cli2exec", sub: "servicos" },
+      { y: 224, name: "DSM → CLI → exec", sub: "pipeline observavel" }
+    ];
+    services.forEach(function (s) {
+      const g = svg("g");
+      g.appendChild(svg("rect", { x: 70, y: s.y, width: 320, height: 50, rx: 12, class: "ha-card" }));
+      g.appendChild(svgText(90, s.y + 22, s.name, { class: "ha-title", "font-family": "monospace" }));
+      g.appendChild(svgText(90, s.y + 40, s.sub, { class: "ha-label" }));
+      root.appendChild(g);
+    });
+
+    // linha vertical de fluxo com setas
+    const xline = 230;
+    [
+      [64, 100], [150, 162], [212, 224], [274, 316]
+    ].forEach(function (seg) {
+      root.appendChild(svg("line", { x1: xline, y1: seg[0], x2: xline, y2: seg[1], class: "ha-flow", "stroke-width": 2, "marker-end": "url(#ha-arrow)" }));
+    });
+
+    return root;
+  }
+
   /* ---- Timeline ---- */
   function buildTimeline(lang) {
     const phases = PHASES[lang];
@@ -217,22 +266,28 @@
     app.innerHTML = "";
     setLang(lang);
 
-    // HERO
-    const hero = el("section", { class: "hero" });
+    // HERO (duas colunas: texto + figura de capa)
+    const hero = el("section", { class: "hero", attrs: { id: "top" } });
     const hw = el("div", { class: "wrap" });
-    hw.appendChild(el("span", { class: "kicker", text: S.home.kicker }));
-    hw.appendChild(el("h1", { text: S.home.title }));
-    hw.appendChild(el("p", { class: "subtitle", text: S.home.subtitle }));
-    hw.appendChild(el("div", { class: "byline", children: [
+    const heroGrid = el("div", { class: "hero-grid" });
+    const heroLeft = el("div");
+    heroLeft.appendChild(el("span", { class: "kicker", text: S.home.kicker }));
+    heroLeft.appendChild(el("h1", { text: S.home.title }));
+    heroLeft.appendChild(el("p", { class: "subtitle", text: S.home.subtitle }));
+    heroLeft.appendChild(el("div", { class: "byline", children: [
       el("span", { html: "<strong>" + S.home.author + "</strong>" }),
       el("span", { text: S.home.advisors })
     ] }));
-    hw.appendChild(el("p", { class: "lede", text: S.home.lede }));
-    const btns = el("div", { class: "btn-row", children: [
+    heroLeft.appendChild(el("p", { class: "lede", text: S.home.lede }));
+    heroLeft.appendChild(el("div", { class: "btn-row", children: [
       el("a", { class: "btn btn-primary", href: "#timeline", text: S.home.ctaTimeline }),
       el("a", { class: "btn btn-ghost", href: "#architecture", text: S.home.ctaArch })
-    ] });
-    hw.appendChild(btns);
+    ] }));
+    const heroArtCard = el("div", { class: "hero-art-card" });
+    heroArtCard.appendChild(buildHeroArt(lang));
+    heroGrid.appendChild(heroLeft);
+    heroGrid.appendChild(heroArtCard);
+    hw.appendChild(heroGrid);
     hero.appendChild(hw);
     app.appendChild(hero);
 
@@ -287,6 +342,29 @@
     tw.appendChild(buildTimeline(lang));
     tlSec.appendChild(tw);
     app.appendChild(tlSec);
+
+    // VIDEO
+    const vidSec = el("section", { attrs: { id: "video" } });
+    const vw = el("div", { class: "wrap" });
+    vw.appendChild(el("div", { class: "section-head", children: [
+      el("h2", { text: S.home.videoTitle }),
+      el("p", { text: S.home.videoLede })
+    ] }));
+    const vwrap = el("div", { class: "video-wrap" });
+    const vframe = el("div", { class: "video-frame" });
+    const iframe = el("iframe", { attrs: {
+      src: "https://www.youtube-nocookie.com/embed/" + VIDEO_ID,
+      title: S.home.videoTitle,
+      loading: "lazy",
+      allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+      referrerpolicy: "strict-origin-when-cross-origin",
+      allowfullscreen: ""
+    } });
+    vframe.appendChild(iframe);
+    vwrap.appendChild(vframe);
+    vw.appendChild(vwrap);
+    vidSec.appendChild(vw);
+    app.appendChild(vidSec);
 
     // THREE MOVES
     const mvSec = el("section");
@@ -345,6 +423,7 @@
     document.getElementById("footer-text").textContent = S.footer.text;
     document.getElementById("footer-repos").textContent = S.footer.repos;
     buildLangSwitcher(document.getElementById("lang-switch"), lang, function (newLang) { render(newLang); });
+    buildThemeToggle(document.getElementById("theme-toggle"), S.theme);
   }
 
   document.addEventListener("DOMContentLoaded", function () {
