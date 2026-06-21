@@ -349,6 +349,8 @@ section { padding: 46px 0; }
 /* ----------------------------- Footer ----------------------------- */
 .site-footer { border-top: 1px solid var(--border-soft); margin-top: 40px; padding: 34px 0; color: var(--text-dim); font-size: 0.9rem; }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center; }
+.footer-credit { margin-top: 16px; font-size: 0.85rem; color: var(--text-dim); }
+.footer-credit a { font-weight: 600; }
 
 /* ----------------------------- Responsive ----------------------------- */
 @media (max-width: 860px) {

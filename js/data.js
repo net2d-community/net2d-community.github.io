@@ -94,7 +94,8 @@ const SITE = {
     },
     footer: {
       text: "Ecossistema Net2d · Programa de Pos-Graduacao em Engenharia de Software (PPGES) · Universidade Federal do Pampa (UNIPAMPA) · Alegrete, 2026",
-      repos: "Repositorios da organizacao"
+      repos: "Repositorios da organizacao",
+      credit: "Desenvolvido por"
     }
   },
 
@@ -172,7 +173,8 @@ const SITE = {
     },
     footer: {
       text: "Ecosistema Net2d · Programa de Posgrado en Ingenieria de Software (PPGES) · Universidad Federal de Pampa (UNIPAMPA) · Alegrete, 2026",
-      repos: "Repositorios de la organizacion"
+      repos: "Repositorios de la organizacion",
+      credit: "Desarrollado por"
     }
   },
 
@@ -250,7 +252,8 @@ const SITE = {
     },
     footer: {
       text: "Net2d ecosystem · Software Engineering Graduate Program (PPGES) · Federal University of Pampa (UNIPAMPA) · Alegrete, 2026",
-      repos: "Organization repositories"
+      repos: "Organization repositories",
+      credit: "Built by"
     }
   }
 };

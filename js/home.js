@@ -422,6 +422,7 @@
     document.getElementById("nav-product").textContent = S.nav.product;
     document.getElementById("footer-text").textContent = S.footer.text;
     document.getElementById("footer-repos").textContent = S.footer.repos;
+    document.getElementById("footer-credit-label").textContent = S.footer.credit;
     buildLangSwitcher(document.getElementById("lang-switch"), lang, function (newLang) { render(newLang); });
     buildThemeToggle(document.getElementById("theme-toggle"), S.theme);
   }
