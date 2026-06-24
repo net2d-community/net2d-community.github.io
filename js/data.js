@@ -16,6 +16,21 @@ const REPOS = {
   org: "https://github.com/orgs/net2d-community/repositories"
 };
 
+/*
+ * Artigo (SOL/SBC), artefato/repositório (link extraído de dentro do PDF do artigo)
+ * e print da parte inicial do PDF (título, autores e resumo/abstract) por fase.
+ * Comum aos três idiomas; indexado pelo id da fase.
+ * url/artifact/thumb = null quando o artigo ainda não foi publicado (submetido).
+ */
+const PAPERS = {
+  1: { url: "https://sol.sbc.org.br/index.php/errc/article/view/35439", artifact: null, thumb: "img/papers/fase1.png" },
+  2: { url: "https://sol.sbc.org.br/index.php/sbrc_estendido/article/view/35869", artifact: "https://github.com/net2d-community/net2d", thumb: "img/papers/fase2.png" },
+  3: { url: "https://sol.sbc.org.br/index.php/sbseg/article/view/36682", artifact: "https://github.com/SBSeg25/DynSecNet", thumb: "img/papers/fase3.png" },
+  4: { url: "https://sol.sbc.org.br/index.php/errc/article/view/39181", artifact: "https://gitlab.com/net2d-community/net2d-labs", thumb: "img/papers/fase4.png" },
+  5: { url: "https://sol.sbc.org.br/index.php/sbrc_estendido/article/view/42581", artifact: "https://github.com/net2d-community/dsm2cli", thumb: "img/papers/fase5.png" },
+  6: { url: null, artifact: null, thumb: null }
+};
+
 /* Vídeo de apresentação do Net2d (YouTube). */
 const VIDEO_ID = "kPi7YJsS7k0";
 
@@ -71,6 +86,11 @@ const SITE = {
       fit: "Como esta fase se encaixa no todo",
       venue: "Publicação",
       repo: "Repositório",
+      paperTitle: "Artigo e artefato",
+      paperLink: "Ler o artigo (SOL/SBC) ↗",
+      artifactLink: "Repositório / artefato do artigo ↗",
+      paperThumbAlt: "Primeira página do artigo: título, autores e resumo",
+      paperPending: "Artigo submetido; ainda não publicado na biblioteca SOL/SBC.",
       prev: "Fase anterior",
       next: "Próxima fase",
       phaseOf: "Fase {n} de 6",
@@ -155,6 +175,11 @@ const SITE = {
       fit: "Cómo encaja esta fase en el conjunto",
       venue: "Publicación",
       repo: "Repositorio",
+      paperTitle: "Artículo y artefacto",
+      paperLink: "Leer el artículo (SOL/SBC) ↗",
+      artifactLink: "Repositorio / artefacto del artículo ↗",
+      paperThumbAlt: "Primera página del artículo: título, autores y resumen",
+      paperPending: "Artículo enviado; aún no publicado en la biblioteca SOL/SBC.",
       prev: "Fase anterior",
       next: "Fase siguiente",
       phaseOf: "Fase {n} de 6",
@@ -239,6 +264,11 @@ const SITE = {
       fit: "How this phase fits the whole",
       venue: "Publication",
       repo: "Repository",
+      paperTitle: "Paper and artifact",
+      paperLink: "Read the paper (SOL/SBC) ↗",
+      artifactLink: "Paper repository / artifact ↗",
+      paperThumbAlt: "First page of the paper: title, authors and abstract",
+      paperPending: "Paper submitted; not yet published in the SOL/SBC library.",
       prev: "Previous phase",
       next: "Next phase",
       phaseOf: "Phase {n} of 6",
@@ -365,7 +395,7 @@ const PHASES = {
       fit: "Transição da automação baseada em templates para a investigação sistemática da tradução DSM-CLI com LLMs. O DSM passa a funcionar como contrato intermediário entre estado desejado e configuração, ideia central das fases finais. Também expõe a lacuna: ainda falta avaliação semântica independente."
     },
     {
-      id: 5, year: "2026", venue: "SBRC 2026", venueFull: "Anais Estendidos do SBRC 2026: Salão de Ferramentas (submetido)",
+      id: 5, year: "2026", venue: "SBRC 2026", venueFull: "Anais Estendidos do SBRC 2026: Salão de Ferramentas",
       tag: "Avaliação semântica", color: "p5",
       seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2026/",
       short: "dsm2cli e avaliação semântica independente",
@@ -500,7 +530,7 @@ PHASES.es = [
     fit: "Transición de la automatización basada en plantillas hacia la investigación sistemática de la traducción DSM-CLI con LLMs. El DSM pasa a funcionar como contrato intermedio entre estado deseado y configuración, idea central de las fases finales. También expone la brecha: aún falta evaluación semántica independiente."
   },
   {
-    id: 5, year: "2026", venue: "SBRC 2026", venueFull: "Anais Estendidos do SBRC 2026: Salón de Herramientas (enviado)",
+    id: 5, year: "2026", venue: "SBRC 2026", venueFull: "Anais Estendidos do SBRC 2026: Salón de Herramientas",
     tag: "Evaluación semántica", color: "p5",
     seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2026/",
     short: "dsm2cli y evaluación semántica independiente",
@@ -633,7 +663,7 @@ PHASES.en = [
     fit: "The transition from template-based automation to a systematic investigation of DSM-to-CLI translation with LLMs. The DSM becomes an intermediate contract between desired state and configuration, a central idea of the final phases. It also exposes the gap: independent semantic assessment is still missing."
   },
   {
-    id: 5, year: "2026", venue: "SBRC 2026", venueFull: "SBRC 2026 Extended Proceedings: Tools Track (submitted)",
+    id: 5, year: "2026", venue: "SBRC 2026", venueFull: "SBRC 2026 Extended Proceedings: Tools Track",
     tag: "Semantic assessment", color: "p5",
     seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2026/",
     short: "dsm2cli and independent semantic assessment",

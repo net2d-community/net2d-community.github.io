@@ -81,6 +81,47 @@
     const grid = el("div", { class: "phase-grid" });
     grid.style.setProperty("--c", "var(--" + p.color + ")");
 
+    // Paper + artifact + first-page screenshot (full width, leads the grid)
+    const paper = (typeof PAPERS !== "undefined") ? PAPERS[id] : null;
+    if (paper) {
+      const paperBlock = el("div", { class: "block full paper-block" });
+      paperBlock.appendChild(el("h3", { class: "block-title", children: [
+        el("span", { class: "ic", text: "▣" }), document.createTextNode(ui.paperTitle)
+      ] }));
+
+      const pcard = el("div", { class: "paper-card" });
+
+      if (paper.thumb) {
+        const img = el("img", { class: "paper-img", attrs: {
+          src: paper.thumb, alt: ui.paperThumbAlt, loading: "lazy"
+        } });
+        const thumbChildren = [img, el("span", { class: "paper-thumb-hint", text: ui.paperLink })];
+        if (paper.url) {
+          pcard.appendChild(el("a", { class: "paper-thumb", href: paper.url,
+            attrs: { target: "_blank", rel: "noopener", title: ui.paperLink }, children: thumbChildren }));
+        } else {
+          pcard.appendChild(el("span", { class: "paper-thumb", children: [img] }));
+        }
+      }
+
+      const links = el("div", { class: "paper-links" });
+      links.appendChild(el("p", { class: "paper-venue", text: p.venueFull }));
+      if (paper.url) {
+        links.appendChild(el("a", { class: "repo-link", href: paper.url,
+          attrs: { target: "_blank", rel: "noopener" }, text: ui.paperLink }));
+      } else {
+        links.appendChild(el("p", { class: "paper-pending", text: ui.paperPending }));
+      }
+      if (paper.artifact) {
+        links.appendChild(el("a", { class: "repo-link", href: paper.artifact,
+          attrs: { target: "_blank", rel: "noopener" }, text: ui.artifactLink }));
+      }
+      pcard.appendChild(links);
+
+      paperBlock.appendChild(pcard);
+      grid.appendChild(paperBlock);
+    }
+
     // Objectives
     grid.appendChild(el("div", { class: "block", children: [
       el("h3", { class: "block-title", children: [ el("span", { class: "ic", text: "◎" }), document.createTextNode(ui.objectives) ] }),
