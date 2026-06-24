@@ -332,7 +332,7 @@ const PHASES = {
     {
       id: 2, year: "2025", venue: "SBRC-SF 2025", venueFull: "Salão de Ferramentas do SBRC 2025",
       tag: "SSoT", color: "p2",
-      seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2025/",
+      seals: ["D", "F", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2025/",
       short: "TrueState-SNA e generalização baseada em SSoT",
       title: "TrueState-SNA: uma solução baseada em SSoT para automação de redes heterogêneas",
       summary: "Generaliza e nomeia a arquitetura: uma solução aberta, modular e extensível baseada em Fonte Única de Verdade (SSoT), com a tradução ganhando relevância própria.",
@@ -467,7 +467,7 @@ PHASES.es = [
   {
     id: 2, year: "2025", venue: "SBRC-SF 2025", venueFull: "Salón de Herramientas del SBRC 2025",
     tag: "SSoT", color: "p2",
-    seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2025/",
+    seals: ["D", "F", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2025/",
     short: "TrueState-SNA y generalización basada en SSoT",
     title: "TrueState-SNA: una solución basada en SSoT para automatización de redes heterogéneas",
     summary: "Generaliza y nombra la arquitectura: una solución abierta, modular y extensible basada en Fuente Única de Verdad (SSoT), donde la traducción gana relevancia propia.",
@@ -600,7 +600,7 @@ PHASES.en = [
   {
     id: 2, year: "2025", venue: "SBRC-SF 2025", venueFull: "SBRC 2025 Tools Track",
     tag: "SSoT", color: "p2",
-    seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2025/",
+    seals: ["D", "F", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2025/",
     short: "TrueState-SNA and SSoT-based generalization",
     title: "TrueState-SNA: an SSoT-based solution for heterogeneous network automation",
     summary: "Generalizes and names the architecture: an open, modular and extensible solution based on a Single Source of Truth (SSoT), where translation gains its own weight.",
