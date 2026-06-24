@@ -1,8 +1,8 @@
 /*
  * data.js
- * Conteudo trilingue (PT/ES/EN) do site de apresentacao do mestrado.
- * Fonte: dissertacao "Do estado desejado ao estado operacional" (Jeronimo Menezes, UNIPAMPA, 2026)
- * e repositorios publicos da organizacao net2d-community.
+ * Conteúdo trilíngue (PT/ES/EN) do site de apresentação do mestrado.
+ * Fonte: dissertação "Do estado desejado ao estado operacional" (Jerônimo Menezes, UNIPAMPA, 2026)
+ * e repositórios públicos da organização net2d-community.
  *
  * Estrutura: SITE[lang] = { meta, nav, home, phases:[...], product, footer }
  * Cada fase tem: id, year, venue, short, title, objectives[], tools[], results[], fit
@@ -16,52 +16,52 @@ const REPOS = {
   org: "https://github.com/orgs/net2d-community/repositories"
 };
 
-/* Video de apresentacao do Net2d (YouTube). */
+/* Vídeo de apresentação do Net2d (YouTube). */
 const VIDEO_ID = "kPi7YJsS7k0";
 
 const SITE = {
-  /* =========================== PORTUGUES =========================== */
+  /* =========================== PORTUGUÊS =========================== */
   pt: {
     meta: { lang: "pt", label: "PT", dir: "ltr" },
     theme: { light: "Mudar para tema claro", dark: "Mudar para tema escuro" },
     nav: {
       brand: "Net2d",
-      home: "Inicio",
-      timeline: "Trajetoria",
+      home: "Início",
+      timeline: "Trajetória",
       architecture: "Arquitetura",
       product: "Produto final",
-      backHome: "Voltar ao inicio"
+      backHome: "Voltar ao início"
     },
     home: {
-      kicker: "Dissertacao de Mestrado · PPGES · UNIPAMPA · 2026",
+      kicker: "Dissertação de Mestrado · PPGES · UNIPAMPA · 2026",
       title: "Do estado desejado ao estado operacional",
-      subtitle: "Um ecossistema modular para automacao observavel e reprodutivel de redes heterogeneas",
-      author: "Jeronimo Soares de Castro Menezes",
-      advisors: "Orientacao: Diego Kreutz e Rodrigo Brandao Mansilha",
-      lede: "Este site apresenta a trajetoria de pesquisa do mestrado de Jeronimo como uma sequencia de fases. Cada fase corresponde a um artigo publicado ou submetido e a uma ferramenta do ecossistema Net2d. Em conjunto, elas constroem, de forma incremental, uma cadeia de software que transforma o estado desejado da rede, registrado em uma Fonte de Verdade, em configuracoes operacionalizaveis em dispositivos e servicos heterogeneos.",
-      ctaTimeline: "Explorar a trajetoria",
+      subtitle: "Um ecossistema modular para automação observável e reprodutível de redes heterogêneas",
+      author: "Jerônimo Soares de Castro Menezes",
+      advisors: "Orientador: Diego Kreutz · Coorientador: Rodrigo Brandão Mansilha",
+      lede: "Este site apresenta a trajetória de pesquisa do mestrado de Jerônimo como uma sequência de fases. Cada fase corresponde a um artigo publicado ou submetido e a uma ferramenta do ecossistema Net2d. Em conjunto, elas constroem, de forma incremental, uma cadeia de software que transforma o estado desejado da rede, registrado em uma Fonte de Verdade, em configurações operacionalizáveis em dispositivos e serviços heterogêneos.",
+      ctaTimeline: "Explorar a trajetória",
       ctaArch: "Ver a arquitetura",
       problemTitle: "O problema",
-      problem: "Redes institucionais reunem dispositivos, servicos e fabricantes de muitas geracoes. Manter coerencia entre o que foi planejado, o que esta documentado e o que esta realmente configurado e dificil e propenso a erros. A pergunta central da pesquisa: como conceber, implementar e avaliar um ecossistema modular, logicamente centralizado e observavel que organize a passagem do estado desejado para configuracoes operacionalizaveis em redes heterogeneas?",
+      problem: "Redes institucionais reúnem dispositivos, serviços e fabricantes de muitas gerações. Manter coerência entre o que foi planejado, o que está documentado e o que está realmente configurado é difícil e propenso a erros. A pergunta central da pesquisa: como conceber, implementar e avaliar um ecossistema modular, logicamente centralizado e observável que organize a passagem do estado desejado para configurações operacionalizáveis em redes heterogêneas?",
       axisTitle: "O eixo organizador",
       axisDesired: "Estado desejado",
-      axisDesiredDesc: "O que a rede deve ser: enderecos, interfaces, VLANs, politicas, reservas e servicos, registrados em uma Fonte de Verdade da Rede.",
+      axisDesiredDesc: "O que a rede deve ser: endereços, interfaces, VLANs, políticas, reservas e serviços, registrados em uma Fonte de Verdade da Rede.",
       axisOperational: "Estado operacional",
-      axisOperationalDesc: "O que esta efetivamente configurado nos dispositivos e servicos. A automacao e o esforco de transformar, manter e verificar a relacao entre os dois.",
+      axisOperationalDesc: "O que está efetivamente configurado nos dispositivos e serviços. A automação é o esforço de transformar, manter e verificar a relação entre os dois.",
       archTitle: "Como tudo se encaixa",
-      archLede: "A figura abaixo integra todas as pecas, fases e ferramentas. O net2d atua como orquestrador logicamente centralizado. A Fonte de Verdade da Rede e a origem autoritativa do estado desejado; os dispositivos e servicos sao os alvos operacionais. Clique em um componente ou em uma fase para abrir os detalhes.",
+      archLede: "A figura abaixo integra todas as peças, fases e ferramentas. O net2d atua como orquestrador logicamente centralizado. A Fonte de Verdade da Rede é a origem autoritativa do estado desejado; os dispositivos e serviços são os alvos operacionais. Clique em um componente ou em uma fase para abrir os detalhes.",
       archChainTitle: "A cadeia conceitual",
-      timelineTitle: "Trajetoria em seis fases",
-      timelineLede: "Da automacao baseada em Fonte de Verdade da Rede ate o benchmark semantico reprodutivel. Escolha uma fase para ver objetivos, ferramentas e resultados.",
-      videoTitle: "Net2d em acao",
-      videoLede: "Apresentacao em video do laboratorio Net2d, mostrando a automacao de dispositivos a partir da Fonte de Verdade da Rede.",
+      timelineTitle: "Trajetória em seis fases",
+      timelineLede: "Da automação baseada em Fonte de Verdade da Rede até o benchmark semântico reprodutível. Escolha uma fase para ver objetivos, ferramentas e resultados.",
+      videoTitle: "Net2d em ação",
+      videoLede: "Apresentação em vídeo do laboratório Net2d, mostrando a automação de dispositivos a partir da Fonte de Verdade da Rede.",
       heroArtDesired: "Estado desejado",
       heroArtOperational: "Estado operacional",
-      threeMovesTitle: "Tres movimentos complementares",
+      threeMovesTitle: "Três movimentos complementares",
       threeMoves: [
-        { t: "Arquitetural", d: "De uma integracao com a Fonte de Verdade da Rede para uma arquitetura modular de servicos especializados." },
-        { t: "Metodologico", d: "A traducao evolui de codigo e templates para DSMs, modelos de linguagem, avaliacao semantica e benchmark." },
-        { t: "Experimental", d: "De provas de conceito para protocolos comparaveis e reprodutiveis, com artefatos preservados." }
+        { t: "Arquitetural", d: "De uma integração com a Fonte de Verdade da Rede para uma arquitetura modular de serviços especializados." },
+        { t: "Metodológico", d: "A tradução evolui de código e templates para DSMs, modelos de linguagem, avaliação semântica e benchmark." },
+        { t: "Experimental", d: "De provas de conceito para protocolos comparáveis e reprodutíveis, com artefatos preservados." }
       ]
     },
     phaseUi: {
@@ -69,37 +69,42 @@ const SITE = {
       tools: "Ferramenta(s) desenvolvida(s)",
       results: "Resultados atingidos",
       fit: "Como esta fase se encaixa no todo",
-      venue: "Publicacao",
-      repo: "Repositorio",
+      venue: "Publicação",
+      repo: "Repositório",
       prev: "Fase anterior",
-      next: "Proxima fase",
+      next: "Próxima fase",
       phaseOf: "Fase {n} de 6",
-      allPhases: "Todas as fases"
+      allPhases: "Todas as fases",
+      seals: {
+        title: "Selos de avaliação de artefatos",
+        link: "Edição da avaliação de artefatos ↗",
+        names: { D: "Artefatos Disponíveis", F: "Artefatos Funcionais", S: "Artefatos Sustentáveis", R: "Experimentos Reprodutíveis" }
+      }
     },
     product: {
       title: "O produto final: o ecossistema Net2d",
-      lede: "O produto tecnico-cientifico consolidado e o ecossistema Net2d: uma composicao modular de servicos, contratos e artefatos. Logicamente centralizado (uma Fonte de Verdade da Rede como referencia autoritativa) e operacionalmente modular (servicos que evoluem de forma independente).",
-      chain: "Fonte de Verdade da Rede → DSM → traducao → avaliacao semantica → artefatos → execucao controlada",
+      lede: "O produto técnico-científico consolidado é o ecossistema Net2d: uma composição modular de serviços, contratos e artefatos. Logicamente centralizado (uma Fonte de Verdade da Rede como referência autoritativa) e operacionalmente modular (serviços que evoluem de forma independente).",
+      chain: "Fonte de Verdade da Rede → DSM → tradução → avaliação semântica → artefatos → execução controlada",
       components: [
-        { name: "net2d", role: "Orquestrador logicamente centralizado: recebe eventos, cria execucoes rastreaveis (PipelineRun) e articula os demais servicos.", repo: REPOS.net2d },
+        { name: "net2d", role: "Orquestrador logicamente centralizado: recebe eventos, cria execuções rastreáveis (PipelineRun) e articula os demais serviços.", repo: REPOS.net2d },
         { name: "nsot2dsm", role: "Normaliza dados e eventos da Fonte de Verdade da Rede em modelos estruturados de estado desejado (DSM).", repo: null },
-        { name: "dsm2cli", role: "Traduz DSMs em CLI multivendor e realiza avaliacao semantica independente com votos, vereditos e evidencias.", repo: REPOS.dsm2cli },
-        { name: "cli2exec", role: "Apoia a execucao controlada dos comandos em dispositivos, preservando saidas, falhas e evidencias operacionais.", repo: null },
-        { name: "dsm2cli-bench", role: "Organiza experimentos reprodutiveis: cenarios, perfis, repeticoes, juizes fixos e taxonomia de falhas.", repo: REPOS.bench }
+        { name: "dsm2cli", role: "Traduz DSMs em CLI multivendor e realiza avaliação semântica independente com votos, vereditos e evidências.", repo: REPOS.dsm2cli },
+        { name: "cli2exec", role: "Apoia a execução controlada dos comandos em dispositivos, preservando saídas, falhas e evidências operacionais.", repo: null },
+        { name: "dsm2cli-bench", role: "Organiza experimentos reprodutíveis: cenários, perfis, repetições, juízes fixos e taxonomia de falhas.", repo: REPOS.bench }
       ],
-      instTitle: "Adocao institucional e transferencia tecnologica",
-      inst: "Principios do ecossistema foram aplicados na UFRGS, com destaque para a modernizacao do servico DHCP. Nesse arranjo, o CASCO atua como governanca, o Netbox como Fonte de Verdade da Rede, o netbox2kea3 como integracao e o Kea como servico operacional (DHCPv4/DHCPv6). Validacoes laboratoriais cobriram switches H3C, Huawei e Cisco IOS.",
-      scopeTitle: "Escopo e limitacoes",
-      scope: "A contribuicao empirica mais aprofundada concentra-se na representacao DSM, na traducao DSM-CLI e na avaliacao semantica independente. A execucao controlada integra a arquitetura, mas reconciliacao completa de estado, checkpoint e rollback permanecem como direcoes de evolucao. A avaliacao semantica por juizes LLM apoia inspecao e comparacao; nao substitui verificacao formal, testes em dispositivos reais nem revisao humana."
+      instTitle: "Adoção institucional e transferência tecnológica",
+      inst: "Princípios do ecossistema foram aplicados na UFRGS, com destaque para a modernização do serviço DHCP. Nesse arranjo, o CASCO atua como governança, o Netbox como Fonte de Verdade da Rede, o netbox2kea3 como integração e o Kea como serviço operacional (DHCPv4/DHCPv6). Validações laboratoriais cobriram switches H3C, Huawei e Cisco IOS.",
+      scopeTitle: "Escopo e limitações",
+      scope: "A contribuição empírica mais aprofundada concentra-se na representação DSM, na tradução DSM-CLI e na avaliação semântica independente. A execução controlada integra a arquitetura, mas a reconciliação completa de estado, checkpoint e rollback permanecem como direções de evolução. A avaliação semântica por juízes LLM apoia inspeção e comparação; não substitui verificação formal, testes em dispositivos reais nem revisão humana."
     },
     footer: {
-      text: "Ecossistema Net2d · Programa de Pos-Graduacao em Engenharia de Software (PPGES) · Universidade Federal do Pampa (UNIPAMPA) · Alegrete, 2026",
-      repos: "Repositorios da organizacao",
+      text: "Ecossistema Net2d · Programa de Pós-Graduação em Engenharia de Software (PPGES) · Universidade Federal do Pampa (UNIPAMPA) · Alegrete, 2026",
+      repos: "Repositórios da organização",
       credit: "Desenvolvido por"
     }
   },
 
-  /* =========================== ESPANOL =========================== */
+  /* =========================== ESPAÑOL =========================== */
   es: {
     meta: { lang: "es", label: "ES", dir: "ltr" },
     theme: { light: "Cambiar a tema claro", dark: "Cambiar a tema oscuro" },
@@ -112,34 +117,34 @@ const SITE = {
       backHome: "Volver al inicio"
     },
     home: {
-      kicker: "Tesis de Maestria · PPGES · UNIPAMPA · 2026",
+      kicker: "Tesis de Maestría · PPGES · UNIPAMPA · 2026",
       title: "Del estado deseado al estado operacional",
-      subtitle: "Un ecosistema modular para la automatizacion observable y reproducible de redes heterogeneas",
-      author: "Jeronimo Soares de Castro Menezes",
-      advisors: "Direccion: Diego Kreutz y Rodrigo Brandao Mansilha",
-      lede: "Este sitio presenta la trayectoria de investigacion de la maestria de Jeronimo como una secuencia de fases. Cada fase corresponde a un articulo publicado o enviado y a una herramienta del ecosistema Net2d. En conjunto, construyen de forma incremental una cadena de software que transforma el estado deseado de la red, registrado en una Fuente de Verdad, en configuraciones operacionalizables en dispositivos y servicios heterogeneos.",
+      subtitle: "Un ecosistema modular para la automatización observable y reproducible de redes heterogéneas",
+      author: "Jerônimo Soares de Castro Menezes",
+      advisors: "Director: Diego Kreutz · Codirector: Rodrigo Brandão Mansilha",
+      lede: "Este sitio presenta la trayectoria de investigación de la maestría de Jerônimo como una secuencia de fases. Cada fase corresponde a un artículo publicado o enviado y a una herramienta del ecosistema Net2d. En conjunto, construyen de forma incremental una cadena de software que transforma el estado deseado de la red, registrado en una Fuente de Verdad, en configuraciones operacionalizables en dispositivos y servicios heterogéneos.",
       ctaTimeline: "Explorar la trayectoria",
       ctaArch: "Ver la arquitectura",
       problemTitle: "El problema",
-      problem: "Las redes institucionales reunen dispositivos, servicios y fabricantes de muchas generaciones. Mantener la coherencia entre lo planificado, lo documentado y lo realmente configurado es dificil y propenso a errores. La pregunta central de la investigacion: como concebir, implementar y evaluar un ecosistema modular, logicamente centralizado y observable que organice el paso del estado deseado a configuraciones operacionalizables en redes heterogeneas?",
+      problem: "Las redes institucionales reúnen dispositivos, servicios y fabricantes de muchas generaciones. Mantener la coherencia entre lo planificado, lo documentado y lo realmente configurado es difícil y propenso a errores. La pregunta central de la investigación: ¿cómo concebir, implementar y evaluar un ecosistema modular, lógicamente centralizado y observable que organice el paso del estado deseado a configuraciones operacionalizables en redes heterogéneas?",
       axisTitle: "El eje organizador",
       axisDesired: "Estado deseado",
-      axisDesiredDesc: "Lo que la red debe ser: direcciones, interfaces, VLANs, politicas, reservas y servicios, registrados en una Fuente de Verdad de la Red.",
+      axisDesiredDesc: "Lo que la red debe ser: direcciones, interfaces, VLANs, políticas, reservas y servicios, registrados en una Fuente de Verdad de la Red.",
       axisOperational: "Estado operacional",
-      axisOperationalDesc: "Lo que esta efectivamente configurado en los dispositivos y servicios. La automatizacion es el esfuerzo de transformar, mantener y verificar la relacion entre ambos.",
-      archTitle: "Como encaja todo",
-      archLede: "La figura siguiente integra todas las piezas, fases y herramientas. net2d actua como orquestador logicamente centralizado. La Fuente de Verdad de la Red es el origen autoritativo del estado deseado; los dispositivos y servicios son los objetivos operacionales. Haz clic en un componente o en una fase para abrir los detalles.",
+      axisOperationalDesc: "Lo que está efectivamente configurado en los dispositivos y servicios. La automatización es el esfuerzo de transformar, mantener y verificar la relación entre ambos.",
+      archTitle: "Cómo encaja todo",
+      archLede: "La figura siguiente integra todas las piezas, fases y herramientas. net2d actúa como orquestador lógicamente centralizado. La Fuente de Verdad de la Red es el origen autoritativo del estado deseado; los dispositivos y servicios son los objetivos operacionales. Haz clic en un componente o en una fase para abrir los detalles.",
       archChainTitle: "La cadena conceptual",
       timelineTitle: "Trayectoria en seis fases",
-      timelineLede: "De la automatizacion basada en Fuente de Verdad de la Red hasta el benchmark semantico reproducible. Elige una fase para ver objetivos, herramientas y resultados.",
-      videoTitle: "Net2d en accion",
-      videoLede: "Presentacion en video del laboratorio Net2d, mostrando la automatizacion de dispositivos a partir de la Fuente de Verdad de la Red.",
+      timelineLede: "De la automatización basada en Fuente de Verdad de la Red hasta el benchmark semántico reproducible. Elige una fase para ver objetivos, herramientas y resultados.",
+      videoTitle: "Net2d en acción",
+      videoLede: "Presentación en video del laboratorio Net2d, mostrando la automatización de dispositivos a partir de la Fuente de Verdad de la Red.",
       heroArtDesired: "Estado deseado",
       heroArtOperational: "Estado operacional",
       threeMovesTitle: "Tres movimientos complementarios",
       threeMoves: [
-        { t: "Arquitectonico", d: "De una integracion con la Fuente de Verdad de la Red a una arquitectura modular de servicios especializados." },
-        { t: "Metodologico", d: "La traduccion evoluciona de codigo y plantillas a DSMs, modelos de lenguaje, evaluacion semantica y benchmark." },
+        { t: "Arquitectónico", d: "De una integración con la Fuente de Verdad de la Red a una arquitectura modular de servicios especializados." },
+        { t: "Metodológico", d: "La traducción evoluciona de código y plantillas a DSMs, modelos de lenguaje, evaluación semántica y benchmark." },
         { t: "Experimental", d: "De pruebas de concepto a protocolos comparables y reproducibles, con artefactos preservados." }
       ]
     },
@@ -147,33 +152,38 @@ const SITE = {
       objectives: "Objetivos",
       tools: "Herramienta(s) desarrollada(s)",
       results: "Resultados alcanzados",
-      fit: "Como encaja esta fase en el conjunto",
-      venue: "Publicacion",
+      fit: "Cómo encaja esta fase en el conjunto",
+      venue: "Publicación",
       repo: "Repositorio",
       prev: "Fase anterior",
       next: "Fase siguiente",
       phaseOf: "Fase {n} de 6",
-      allPhases: "Todas las fases"
+      allPhases: "Todas las fases",
+      seals: {
+        title: "Sellos de evaluación de artefactos",
+        link: "Edición de la evaluación de artefactos ↗",
+        names: { D: "Artefactos Disponibles", F: "Artefactos Funcionales", S: "Artefactos Sostenibles", R: "Experimentos Reproducibles" }
+      }
     },
     product: {
       title: "El producto final: el ecosistema Net2d",
-      lede: "El producto tecnico-cientifico consolidado es el ecosistema Net2d: una composicion modular de servicios, contratos y artefactos. Logicamente centralizado (una Fuente de Verdad de la Red como referencia autoritativa) y operacionalmente modular (servicios que evolucionan de forma independiente).",
-      chain: "Fuente de Verdad de la Red → DSM → traduccion → evaluacion semantica → artefactos → ejecucion controlada",
+      lede: "El producto técnico-científico consolidado es el ecosistema Net2d: una composición modular de servicios, contratos y artefactos. Lógicamente centralizado (una Fuente de Verdad de la Red como referencia autoritativa) y operacionalmente modular (servicios que evolucionan de forma independiente).",
+      chain: "Fuente de Verdad de la Red → DSM → traducción → evaluación semántica → artefactos → ejecución controlada",
       components: [
-        { name: "net2d", role: "Orquestador logicamente centralizado: recibe eventos, crea ejecuciones rastreables (PipelineRun) y articula los demas servicios.", repo: REPOS.net2d },
+        { name: "net2d", role: "Orquestador lógicamente centralizado: recibe eventos, crea ejecuciones rastreables (PipelineRun) y articula los demás servicios.", repo: REPOS.net2d },
         { name: "nsot2dsm", role: "Normaliza datos y eventos de la Fuente de Verdad de la Red en modelos estructurados de estado deseado (DSM).", repo: null },
-        { name: "dsm2cli", role: "Traduce DSMs en CLI multivendor y realiza evaluacion semantica independiente con votos, veredictos y evidencias.", repo: REPOS.dsm2cli },
-        { name: "cli2exec", role: "Apoya la ejecucion controlada de los comandos en dispositivos, preservando salidas, fallos y evidencias operacionales.", repo: null },
-        { name: "dsm2cli-bench", role: "Organiza experimentos reproducibles: escenarios, perfiles, repeticiones, jueces fijos y taxonomia de fallos.", repo: REPOS.bench }
+        { name: "dsm2cli", role: "Traduce DSMs en CLI multivendor y realiza evaluación semántica independiente con votos, veredictos y evidencias.", repo: REPOS.dsm2cli },
+        { name: "cli2exec", role: "Apoya la ejecución controlada de los comandos en dispositivos, preservando salidas, fallos y evidencias operacionales.", repo: null },
+        { name: "dsm2cli-bench", role: "Organiza experimentos reproducibles: escenarios, perfiles, repeticiones, jueces fijos y taxonomía de fallos.", repo: REPOS.bench }
       ],
-      instTitle: "Adopcion institucional y transferencia tecnologica",
-      inst: "Principios del ecosistema se aplicaron en la UFRGS, con enfasis en la modernizacion del servicio DHCP. En ese arreglo, CASCO actua como gobernanza, Netbox como Fuente de Verdad de la Red, netbox2kea3 como integracion y Kea como servicio operacional (DHCPv4/DHCPv6). Las validaciones de laboratorio cubrieron switches H3C, Huawei y Cisco IOS.",
+      instTitle: "Adopción institucional y transferencia tecnológica",
+      inst: "Principios del ecosistema se aplicaron en la UFRGS, con énfasis en la modernización del servicio DHCP. En ese arreglo, CASCO actúa como gobernanza, Netbox como Fuente de Verdad de la Red, netbox2kea3 como integración y Kea como servicio operacional (DHCPv4/DHCPv6). Las validaciones de laboratorio cubrieron switches H3C, Huawei y Cisco IOS.",
       scopeTitle: "Alcance y limitaciones",
-      scope: "La contribucion empirica mas profunda se concentra en la representacion DSM, la traduccion DSM-CLI y la evaluacion semantica independiente. La ejecucion controlada integra la arquitectura, pero la reconciliacion completa de estado, checkpoint y rollback siguen siendo direcciones de evolucion. La evaluacion semantica por jueces LLM apoya la inspeccion y la comparacion; no sustituye la verificacion formal, las pruebas en dispositivos reales ni la revision humana."
+      scope: "La contribución empírica más profunda se concentra en la representación DSM, la traducción DSM-CLI y la evaluación semántica independiente. La ejecución controlada integra la arquitectura, pero la reconciliación completa de estado, checkpoint y rollback siguen siendo direcciones de evolución. La evaluación semántica por jueces LLM apoya la inspección y la comparación; no sustituye la verificación formal, las pruebas en dispositivos reales ni la revisión humana."
     },
     footer: {
-      text: "Ecosistema Net2d · Programa de Posgrado en Ingenieria de Software (PPGES) · Universidad Federal de Pampa (UNIPAMPA) · Alegrete, 2026",
-      repos: "Repositorios de la organizacion",
+      text: "Ecosistema Net2d · Programa de Posgrado en Ingeniería de Software (PPGES) · Universidad Federal de Pampa (UNIPAMPA) · Alegrete, 2026",
+      repos: "Repositorios de la organización",
       credit: "Desarrollado por"
     }
   },
@@ -194,9 +204,9 @@ const SITE = {
       kicker: "Master's Dissertation · PPGES · UNIPAMPA · 2026",
       title: "From desired state to operational state",
       subtitle: "A modular ecosystem for observable and reproducible automation of heterogeneous networks",
-      author: "Jeronimo Soares de Castro Menezes",
-      advisors: "Advisors: Diego Kreutz and Rodrigo Brandao Mansilha",
-      lede: "This site presents Jeronimo's master's research as a sequence of phases. Each phase maps to a published or submitted paper and to a tool of the Net2d ecosystem. Together they incrementally build a software chain that turns the network's desired state, stored in a Source of Truth, into operational configurations applied to heterogeneous devices and services.",
+      author: "Jerônimo Soares de Castro Menezes",
+      advisors: "Advisor: Diego Kreutz · Co-advisor: Rodrigo Brandão Mansilha",
+      lede: "This site presents Jerônimo's master's research as a sequence of phases. Each phase maps to a published or submitted paper and to a tool of the Net2d ecosystem. Together they incrementally build a software chain that turns the network's desired state, stored in a Source of Truth, into operational configurations applied to heterogeneous devices and services.",
       ctaTimeline: "Explore the journey",
       ctaArch: "See the architecture",
       problemTitle: "The problem",
@@ -232,7 +242,12 @@ const SITE = {
       prev: "Previous phase",
       next: "Next phase",
       phaseOf: "Phase {n} of 6",
-      allPhases: "All phases"
+      allPhases: "All phases",
+      seals: {
+        title: "Artifact evaluation badges",
+        link: "Artifact evaluation edition ↗",
+        names: { D: "Artifacts Available", F: "Artifacts Functional", S: "Artifacts Sustainable", R: "Results Reproduced" }
+      }
     },
     product: {
       title: "The final product: the Net2d ecosystem",
@@ -267,128 +282,131 @@ const PHASES = {
       id: 1, year: "2024", venue: "XXI ERRC 2024", venueFull: "XXI Escola Regional de Redes de Computadores (ERRC 2024) · doi:10.5753/errc.2024.4692",
       tag: "SoT", color: "p1",
       short: "Arquitetura inicial baseada na Fonte de Verdade da Rede",
-      title: "Gerenciamento de servicos e dispositivos de rede a partir da Fonte de Verdade da Rede (SoT)",
-      summary: "O ponto de partida: usar a Fonte de Verdade da Rede como referencia central do estado desejado e acionar, a partir dela, a automacao de dispositivos e servicos.",
+      title: "Gerenciamento de serviços e dispositivos de rede a partir da Fonte de Verdade da Rede (SoT)",
+      summary: "O ponto de partida: usar a Fonte de Verdade da Rede como referência central do estado desejado e acionar, a partir dela, a automação de dispositivos e serviços.",
       objectives: [
-        "Reduzir a dispersao de informacoes operacionais entre planilhas, sistemas legados e conhecimento tacito.",
-        "Transformar a Fonte de Verdade da Rede de documentacao passiva em parte de um fluxo operacional.",
-        "Organizar a automacao como uma cadeia de software em camadas, com responsabilidades separadas."
+        "Reduzir a dispersão de informações operacionais entre planilhas, sistemas legados e conhecimento tácito.",
+        "Transformar a Fonte de Verdade da Rede de documentação passiva em parte de um fluxo operacional.",
+        "Organizar a automação como uma cadeia de software em camadas, com responsabilidades separadas."
       ],
       tools: [
-        { name: "Prototipo Net2d (inicial)", desc: "Integracao de ferramentas de codigo aberto (Netbox, Django REST Framework e bibliotecas de automacao) para refletir alteracoes da Fonte de Verdade no ambiente operacional.", repo: REPOS.net2d }
+        { name: "Protótipo Net2d (inicial)", desc: "Integração de ferramentas de código aberto (Netbox, Django REST Framework e bibliotecas de automação) para refletir alterações da Fonte de Verdade no ambiente operacional.", repo: REPOS.net2d }
       ],
       results: [
-        "Prototipo funcional demonstrando viabilidade da abordagem.",
-        "Experimento comparando configuracao manual versus automatizada, com ganhos operacionais na ativacao e documentacao de redes.",
-        "Identificacao das limitacoes (sem DSMs, sem avaliacao semantica, sem benchmark) que motivaram os trabalhos seguintes."
+        "Protótipo funcional demonstrando viabilidade da abordagem.",
+        "Experimento comparando configuração manual versus automatizada, com ganhos operacionais na ativação e documentação de redes.",
+        "Identificação das limitações (sem DSMs, sem avaliação semântica, sem benchmark) que motivaram os trabalhos seguintes."
       ],
-      fit: "Marco inicial da trajetoria. Introduz o eixo conceitual que orienta toda a dissertacao: a passagem do estado desejado ao estado operacional. A organizacao em camadas (aplicacao, Fonte de Verdade, interface de servico, traducao, conectores, objetos gerenciados) antecipa a visao modular consolidada depois no ecossistema Net2d."
+      fit: "Marco inicial da trajetória. Introduz o eixo conceitual que orienta toda a dissertação: a passagem do estado desejado ao estado operacional. A organização em camadas (aplicação, Fonte de Verdade, interface de serviço, tradução, conectores, objetos gerenciados) antecipa a visão modular consolidada depois no ecossistema Net2d."
     },
     {
-      id: 2, year: "2025", venue: "SBRC-SF 2025", venueFull: "Salao de Ferramentas do SBRC 2025",
+      id: 2, year: "2025", venue: "SBRC-SF 2025", venueFull: "Salão de Ferramentas do SBRC 2025",
       tag: "SSoT", color: "p2",
-      short: "TrueState-SNA e generalizacao baseada em SSoT",
-      title: "TrueState-SNA: uma solucao baseada em SSoT para automacao de redes heterogeneas",
-      summary: "Generaliza e nomeia a arquitetura: uma solucao aberta, modular e extensivel baseada em Fonte Unica de Verdade (SSoT), com a traducao ganhando relevancia propria.",
+      seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2025/",
+      short: "TrueState-SNA e generalização baseada em SSoT",
+      title: "TrueState-SNA: uma solução baseada em SSoT para automação de redes heterogêneas",
+      summary: "Generaliza e nomeia a arquitetura: uma solução aberta, modular e extensível baseada em Fonte Única de Verdade (SSoT), com a tradução ganhando relevância própria.",
       objectives: [
-        "Consolidar a automacao baseada em Fonte de Verdade da Rede como solucao em camadas, aberta e extensivel.",
-        "Reduzir a dependencia de fornecedores especificos com software de codigo aberto.",
-        "Padronizar a geracao de configuracoes na camada de traducao."
+        "Consolidar a automação baseada em Fonte de Verdade da Rede como solução em camadas, aberta e extensível.",
+        "Reduzir a dependência de fornecedores específicos com software de código aberto.",
+        "Padronizar a geração de configurações na camada de tradução."
       ],
       tools: [
-        { name: "TrueState-SNA", desc: "Cadeia de automacao integrando Netbox (SSoT), Net2d e Ansible. Passa a usar templates Jinja e playbooks Ansible para padronizar a geracao de configuracoes.", repo: REPOS.net2d }
+        { name: "TrueState-SNA", desc: "Cadeia de automação integrando Netbox (SSoT), Net2d e Ansible. Passa a usar templates Jinja e playbooks Ansible para padronizar a geração de configurações.", repo: REPOS.net2d }
       ],
       results: [
-        "Experimento de configuracao de enderecamento IPv4 e IPv6 em roteadores, comparando execucao manual e automatizada.",
-        "Reducao de esforco operacional, com vantagem crescente em cenarios que exigem mais comandos.",
-        "Evidencia de um novo desafio: a manutencao de templates especificos cresce com fabricantes, servicos e cenarios."
+        "Experimento de configuração de endereçamento IPv4 e IPv6 em roteadores, comparando execução manual e automatizada.",
+        "Redução de esforço operacional, com vantagem crescente em cenários que exigem mais comandos.",
+        "Evidência de um novo desafio: a manutenção de templates específicos cresce com fabricantes, serviços e cenários."
       ],
-      fit: "Etapa de consolidacao arquitetural e transicao metodologica. Mantem o eixo estado desejado -> estado operacional, mas a camada de traducao deixa de ser detalhe interno e passa a ser objeto de investigacao. Esse deslocamento motiva diretamente o uso posterior de DSMs, modelos de linguagem e avaliacao semantica."
+      fit: "Etapa de consolidação arquitetural e transição metodológica. Mantém o eixo estado desejado -> estado operacional, mas a camada de tradução deixa de ser detalhe interno e passa a ser objeto de investigação. Esse deslocamento motiva diretamente o uso posterior de DSMs, modelos de linguagem e avaliação semântica."
     },
     {
       id: 3, year: "2025", venue: "SBSeg 2025", venueFull: "SBSeg 2025",
       tag: "Firewalls", color: "p3",
-      short: "DynSecNet e automacao reativa de firewalls",
+      seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbseg-2025/",
+      short: "DynSecNet e automação reativa de firewalls",
       title: "Gerenciamento integrado e adaptativo de firewalls baseado na SSoT da rede",
-      summary: "Leva a arquitetura ao dominio de seguranca: politicas de firewall como estado desejado, com reatividade a eventos operacionais e de seguranca.",
+      summary: "Leva a arquitetura ao domínio de segurança: políticas de firewall como estado desejado, com reatividade a eventos operacionais e de segurança.",
       objectives: [
-        "Aplicar a cadeia estado desejado-traducao-execucao a politicas de firewall.",
-        "Introduzir operacao orientada por eventos (reatividade operacional, nao autonomia preditiva).",
-        "Manter as politicas de seguranca vinculadas a Fonte de Verdade, favorecendo rastreabilidade e inspecao."
+        "Aplicar a cadeia estado desejado-tradução-execução a políticas de firewall.",
+        "Introduzir operação orientada por eventos (reatividade operacional, não autonomia preditiva).",
+        "Manter as políticas de segurança vinculadas à Fonte de Verdade, favorecendo rastreabilidade e inspeção."
       ],
       tools: [
-        { name: "DynSecNet", desc: "Solucao em camadas (Fonte Unica de Verdade, controle, traducao, execucao) que reage a eventos registrados na SSoT ou notificados por sistemas externos e aplica regras nos firewalls.", repo: null }
+        { name: "DynSecNet", desc: "Solução em camadas (Fonte Única de Verdade, controle, tradução, execução) que reage a eventos registrados na SSoT ou notificados por sistemas externos e aplica regras nos firewalls.", repo: null }
       ],
       results: [
-        "Cenario 1: a ativacao de um novo servico gera, automaticamente, uma regra de liberacao no firewall.",
-        "Cenario 2: um evento de trafego anomalo aciona uma regra de bloqueio, simulando mitigacao reativa de negacao de servico.",
-        "Demonstracao de que a mesma arquitetura modular se aplica a um dominio sensivel, onde tempo de reacao e coerencia sao criticos."
+        "Cenário 1: a ativação de um novo serviço gera, automaticamente, uma regra de liberação no firewall.",
+        "Cenário 2: um evento de tráfego anômalo aciona uma regra de bloqueio, simulando mitigação reativa de negação de serviço.",
+        "Demonstração de que a mesma arquitetura modular se aplica a um domínio sensível, onde tempo de reação e coerência são críticos."
       ],
-      fit: "Amplia o escopo da arquitetura para alem de interfaces, enderecos e VLANs, alcancando politicas de seguranca. Introduz a reatividade a eventos na trajetoria e reforca rastreabilidade e separacao de responsabilidades, preocupacoes que se tornam centrais nas fases seguintes."
+      fit: "Amplia o escopo da arquitetura para além de interfaces, endereços e VLANs, alcançando políticas de segurança. Introduz a reatividade a eventos na trajetória e reforça rastreabilidade e separação de responsabilidades, preocupações que se tornam centrais nas fases seguintes."
     },
     {
       id: 4, year: "2025", venue: "ERRC 2025", venueFull: "XXII Escola Regional de Redes de Computadores (ERRC 2025)",
       tag: "DSM + LLM", color: "p4",
-      short: "Net2d-LLM, DSMs e execucao em Network Digital Twin",
-      title: "Net2d-LLM: traduzindo intencoes estruturadas de rede em CLI com LLMs e execucao em Network Digital Twin",
-      summary: "Vira a chave para a camada de traducao: introduz DSMs como contrato intermediario e investiga modelos de linguagem para traduzir DSM em CLI.",
+      short: "Net2d-LLM, DSMs e execução em Network Digital Twin",
+      title: "Net2d-LLM: traduzindo intenções estruturadas de rede em CLI com LLMs e execução em Network Digital Twin",
+      summary: "Vira a chave para a camada de tradução: introduz DSMs como contrato intermediário e investiga modelos de linguagem para traduzir DSM em CLI.",
       objectives: [
-        "Introduzir DSMs (Desired State Models) como representacao estruturada do estado desejado.",
+        "Introduzir DSMs (Desired State Models) como representação estruturada do estado desejado.",
         "Investigar a viabilidade de usar modelos de linguagem para traduzir DSM em comandos CLI.",
-        "Avaliar as configuracoes geradas executando-as em um Network Digital Twin."
+        "Avaliar as configurações geradas executando-as em um Network Digital Twin."
       ],
       tools: [
-        { name: "Net2d-LLM", desc: "Pipeline reprodutivel DSM -> prompt -> LLM -> CLI -> execucao em Network Digital Twin, em passagem unica (sem ciclos automaticos de correcao).", repo: null }
+        { name: "Net2d-LLM", desc: "Pipeline reprodutível DSM -> prompt -> LLM -> CLI -> execução em Network Digital Twin, em passagem única (sem ciclos automáticos de correção).", repo: null }
       ],
       results: [
-        "Comparacao de diferentes modelos de linguagem sob condicoes equivalentes (latencia, uso de tokens, eficiencia e consistencia).",
-        "Demonstracao da viabilidade inicial da traducao DSM-CLI com LLMs em operacoes de Camada 2.",
-        "Preservacao de artefatos de execucao (DSMs, prompts, respostas, comandos, retornos e metricas) para analise posterior."
+        "Comparação de diferentes modelos de linguagem sob condições equivalentes (latência, uso de tokens, eficiência e consistência).",
+        "Demonstração da viabilidade inicial da tradução DSM-CLI com LLMs em operações de Camada 2.",
+        "Preservação de artefatos de execução (DSMs, prompts, respostas, comandos, retornos e métricas) para análise posterior."
       ],
-      fit: "Transicao da automacao baseada em templates para a investigacao sistematica da traducao DSM-CLI com LLMs. O DSM passa a funcionar como contrato intermediario entre estado desejado e configuracao, ideia central das fases finais. Tambem expoe a lacuna: ainda falta avaliacao semantica independente."
+      fit: "Transição da automação baseada em templates para a investigação sistemática da tradução DSM-CLI com LLMs. O DSM passa a funcionar como contrato intermediário entre estado desejado e configuração, ideia central das fases finais. Também expõe a lacuna: ainda falta avaliação semântica independente."
     },
     {
-      id: 5, year: "2026", venue: "SBRC 2026", venueFull: "Anais Estendidos do SBRC 2026: Salao de Ferramentas (submetido)",
-      tag: "Avaliacao semantica", color: "p5",
-      short: "dsm2cli e avaliacao semantica independente",
-      title: "dsm2cli: um pipeline observavel para traduzir intencoes de rede em CLI multivendor com avaliacao semantica independente",
-      summary: "Posicao central da pesquisa: separa traducao de avaliacao. Gerar comandos plausiveis nao basta; juizes independentes verificam se a CLI preserva a intencao do DSM.",
+      id: 5, year: "2026", venue: "SBRC 2026", venueFull: "Anais Estendidos do SBRC 2026: Salão de Ferramentas (submetido)",
+      tag: "Avaliação semântica", color: "p5",
+      seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2026/",
+      short: "dsm2cli e avaliação semântica independente",
+      title: "dsm2cli: um pipeline observável para traduzir intenções de rede em CLI multivendor com avaliação semântica independente",
+      summary: "Posição central da pesquisa: separa tradução de avaliação. Gerar comandos plausíveis não basta; juízes independentes verificam se a CLI preserva a intenção do DSM.",
       objectives: [
-        "Separar explicitamente a etapa de traducao da etapa de avaliacao semantica.",
-        "Introduzir avaliadores (juizes) independentes que analisam a aderencia entre DSM e CLI gerada.",
-        "Produzir artefatos observaveis: votos, vereditos, evidencias de rastreabilidade e telemetria."
+        "Separar explicitamente a etapa de tradução da etapa de avaliação semântica.",
+        "Introduzir avaliadores (juízes) independentes que analisam a aderência entre DSM e CLI gerada.",
+        "Produzir artefatos observáveis: votos, vereditos, evidências de rastreabilidade e telemetria."
       ],
       tools: [
-        { name: "dsm2cli", desc: "Pipeline modular e verificavel com Web API e interface web. Recebe dispositivo-alvo, DSM, modelo tradutor e juizes; devolve CLI, votos, veredito agregado, evidencias e telemetria.", repo: REPOS.dsm2cli }
+        { name: "dsm2cli", desc: "Pipeline modular e verificável com Web API e interface web. Recebe dispositivo-alvo, DSM, modelo tradutor e juízes; devolve CLI, votos, veredito agregado, evidências e telemetria.", repo: REPOS.dsm2cli }
       ],
       results: [
-        "Avaliacao em seis cenarios multivendor, quatro configuracoes de pipeline e 72 execucoes.",
-        "Exposicao de falhas semanticas que ficam ocultas em fluxos baseados apenas na geracao de comandos.",
-        "Analise de trade-offs entre robustez, custo e latencia, sob um contrato unificado."
+        "Avaliação em seis cenários multivendor, quatro configurações de pipeline e 72 execuções.",
+        "Exposição de falhas semânticas que ficam ocultas em fluxos baseados apenas na geração de comandos.",
+        "Análise de trade-offs entre robustez, custo e latência, sob um contrato unificado."
       ],
-      fit: "Posicao central: conecta DSM, traducao multivendor, LLMs, avaliacao semantica, rastreabilidade e reprodutibilidade. A traducao vira etapa observavel, comparavel e inspecionavel, aproximando o Net2d de uma plataforma de avaliacao, e nao apenas de execucao. Prepara o benchmark da fase seguinte."
+      fit: "Posição central: conecta DSM, tradução multivendor, LLMs, avaliação semântica, rastreabilidade e reprodutibilidade. A tradução vira etapa observável, comparável e inspecionável, aproximando o Net2d de uma plataforma de avaliação, e não apenas de execução. Prepara o benchmark da fase seguinte."
     },
     {
       id: 6, year: "2026", venue: "WIARC 2026", venueFull: "WIARC 2026 (submetido)",
       tag: "Benchmark", color: "p6",
-      short: "dsm2cli-bench e benchmark semantico reprodutivel",
-      title: "Um benchmark semantico reprodutivel para traducao DSM-CLI multivendor",
-      summary: "Fechamento experimental: transforma a avaliacao em um benchmark reprodutivel, com matriz controlada de tradutores, fabricantes, casos de uso e repeticoes.",
+      short: "dsm2cli-bench e benchmark semântico reprodutível",
+      title: "Um benchmark semântico reprodutível para tradução DSM-CLI multivendor",
+      summary: "Fechamento experimental: transforma a avaliação em um benchmark reprodutível, com matriz controlada de tradutores, fabricantes, casos de uso e repetições.",
       objectives: [
-        "Transformar a avaliacao da traducao DSM-CLI em um benchmark semantico reprodutivel.",
-        "Definir uma matriz experimental controlada com juizes fixos e taxonomia de falhas.",
-        "Avaliar nao so corretude, mas estabilidade, concordancia entre juizes, sensibilidade a fabricante, custo e latencia."
+        "Transformar a avaliação da tradução DSM-CLI em um benchmark semântico reprodutível.",
+        "Definir uma matriz experimental controlada com juízes fixos e taxonomia de falhas.",
+        "Avaliar não só corretude, mas estabilidade, concordância entre juízes, sensibilidade a fabricante, custo e latência."
       ],
       tools: [
-        { name: "dsm2cli-bench", desc: "Arcabouco que orquestra execucoes contra a API do dsm2cli, organiza cenarios, perfis e manifests, e consolida resultados agregados.", repo: REPOS.bench },
-        { name: "wiarc2026-experiment", desc: "Pacote de reprodutibilidade com a definicao do benchmark congelada, saidas brutas, figuras e metadados do experimento WIARC 2026.", repo: REPOS.wiarc }
+        { name: "dsm2cli-bench", desc: "Arcabouço que orquestra execuções contra a API do dsm2cli, organiza cenários, perfis e manifests, e consolida resultados agregados.", repo: REPOS.bench },
+        { name: "wiarc2026-experiment", desc: "Pacote de reprodutibilidade com a definição do benchmark congelada, saídas brutas, figuras e metadados do experimento WIARC 2026.", repo: REPOS.wiarc }
       ],
       results: [
-        "Protocolo com 3 fabricantes, 5 casos de uso, 5 tradutores e 10 repeticoes por celula: 750 execucoes, com painel fixo de 3 juizes.",
-        "Analise multidimensional que revela efeitos ocultos em metricas agregadas (estabilidade, divergencia entre juizes, custo).",
-        "Achado relevante: concentracao de falhas semanticas em cenarios Huawei VRP, com hipotese ligada a documentacao tecnica predominantemente em chines."
+        "Protocolo com 3 fabricantes, 5 casos de uso, 5 tradutores e 10 repetições por célula: 750 execuções, com painel fixo de 3 juízes.",
+        "Análise multidimensional que revela efeitos ocultos em métricas agregadas (estabilidade, divergência entre juízes, custo).",
+        "Achado relevante: concentração de falhas semânticas em cenários Huawei VRP, com hipótese ligada à documentação técnica predominantemente em chinês."
       ],
-      fit: "Fechamento experimental da trajetoria. Retoma Fonte de Verdade da Rede, DSMs, traducao multivendor, avaliacao semantica e reprodutibilidade, articulando-os num protocolo de benchmark. Consolida o ponto de maior maturidade da camada de traducao e oferece base reprodutivel e extensivel para estudos futuros."
+      fit: "Fechamento experimental da trajetória. Retoma Fonte de Verdade da Rede, DSMs, tradução multivendor, avaliação semântica e reprodutibilidade, articulando-os num protocolo de benchmark. Consolida o ponto de maior maturidade da camada de tradução e oferece base reprodutível e extensível para estudos futuros."
     }
   ]
 };
@@ -399,128 +417,131 @@ PHASES.es = [
     id: 1, year: "2024", venue: "XXI ERRC 2024", venueFull: "XXI Escola Regional de Redes de Computadores (ERRC 2024) · doi:10.5753/errc.2024.4692",
     tag: "SoT", color: "p1",
     short: "Arquitectura inicial basada en la Fuente de Verdad de la Red",
-    title: "Gestion de servicios y dispositivos de red a partir de la Fuente de Verdad de la Red (SoT)",
-    summary: "El punto de partida: usar la Fuente de Verdad de la Red como referencia central del estado deseado y, desde ella, accionar la automatizacion de dispositivos y servicios.",
+    title: "Gestión de servicios y dispositivos de red a partir de la Fuente de Verdad de la Red (SoT)",
+    summary: "El punto de partida: usar la Fuente de Verdad de la Red como referencia central del estado deseado y, desde ella, accionar la automatización de dispositivos y servicios.",
     objectives: [
-      "Reducir la dispersion de informacion operativa entre planillas, sistemas heredados y conocimiento tacito.",
-      "Transformar la Fuente de Verdad de la Red de documentacion pasiva en parte de un flujo operativo.",
-      "Organizar la automatizacion como una cadena de software en capas, con responsabilidades separadas."
+      "Reducir la dispersión de información operativa entre planillas, sistemas heredados y conocimiento tácito.",
+      "Transformar la Fuente de Verdad de la Red de documentación pasiva en parte de un flujo operativo.",
+      "Organizar la automatización como una cadena de software en capas, con responsabilidades separadas."
     ],
     tools: [
-      { name: "Prototipo Net2d (inicial)", desc: "Integracion de herramientas de codigo abierto (Netbox, Django REST Framework y librerias de automatizacion) para reflejar cambios de la Fuente de Verdad en el entorno operativo.", repo: REPOS.net2d }
+      { name: "Prototipo Net2d (inicial)", desc: "Integración de herramientas de código abierto (Netbox, Django REST Framework y librerías de automatización) para reflejar cambios de la Fuente de Verdad en el entorno operativo.", repo: REPOS.net2d }
     ],
     results: [
       "Prototipo funcional que demuestra la viabilidad del enfoque.",
-      "Experimento que compara configuracion manual versus automatizada, con ganancias operativas en la activacion y documentacion de redes.",
-      "Identificacion de las limitaciones (sin DSMs, sin evaluacion semantica, sin benchmark) que motivaron los trabajos siguientes."
+      "Experimento que compara configuración manual versus automatizada, con ganancias operativas en la activación y documentación de redes.",
+      "Identificación de las limitaciones (sin DSMs, sin evaluación semántica, sin benchmark) que motivaron los trabajos siguientes."
     ],
-    fit: "Hito inicial de la trayectoria. Introduce el eje conceptual que guia toda la tesis: el paso del estado deseado al estado operacional. La organizacion en capas (aplicacion, Fuente de Verdad, interfaz de servicio, traduccion, conectores, objetos gestionados) anticipa la vision modular consolidada despues en el ecosistema Net2d."
+    fit: "Hito inicial de la trayectoria. Introduce el eje conceptual que guía toda la tesis: el paso del estado deseado al estado operacional. La organización en capas (aplicación, Fuente de Verdad, interfaz de servicio, traducción, conectores, objetos gestionados) anticipa la visión modular consolidada después en el ecosistema Net2d."
   },
   {
-    id: 2, year: "2025", venue: "SBRC-SF 2025", venueFull: "Salon de Herramientas del SBRC 2025",
+    id: 2, year: "2025", venue: "SBRC-SF 2025", venueFull: "Salón de Herramientas del SBRC 2025",
     tag: "SSoT", color: "p2",
-    short: "TrueState-SNA y generalizacion basada en SSoT",
-    title: "TrueState-SNA: una solucion basada en SSoT para automatizacion de redes heterogeneas",
-    summary: "Generaliza y nombra la arquitectura: una solucion abierta, modular y extensible basada en Fuente Unica de Verdad (SSoT), donde la traduccion gana relevancia propia.",
+    seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2025/",
+    short: "TrueState-SNA y generalización basada en SSoT",
+    title: "TrueState-SNA: una solución basada en SSoT para automatización de redes heterogéneas",
+    summary: "Generaliza y nombra la arquitectura: una solución abierta, modular y extensible basada en Fuente Única de Verdad (SSoT), donde la traducción gana relevancia propia.",
     objectives: [
-      "Consolidar la automatizacion basada en Fuente de Verdad de la Red como solucion en capas, abierta y extensible.",
-      "Reducir la dependencia de fabricantes especificos con software de codigo abierto.",
-      "Estandarizar la generacion de configuraciones en la capa de traduccion."
+      "Consolidar la automatización basada en Fuente de Verdad de la Red como solución en capas, abierta y extensible.",
+      "Reducir la dependencia de fabricantes específicos con software de código abierto.",
+      "Estandarizar la generación de configuraciones en la capa de traducción."
     ],
     tools: [
-      { name: "TrueState-SNA", desc: "Cadena de automatizacion que integra Netbox (SSoT), Net2d y Ansible. Adopta plantillas Jinja y playbooks Ansible para estandarizar la generacion de configuraciones.", repo: REPOS.net2d }
+      { name: "TrueState-SNA", desc: "Cadena de automatización que integra Netbox (SSoT), Net2d y Ansible. Adopta plantillas Jinja y playbooks Ansible para estandarizar la generación de configuraciones.", repo: REPOS.net2d }
     ],
     results: [
-      "Experimento de configuracion de direccionamiento IPv4 e IPv6 en routers, comparando ejecucion manual y automatizada.",
-      "Reduccion de esfuerzo operativo, con ventaja creciente en escenarios que exigen mas comandos.",
-      "Evidencia de un nuevo desafio: el mantenimiento de plantillas especificas crece con fabricantes, servicios y escenarios."
+      "Experimento de configuración de direccionamiento IPv4 e IPv6 en routers, comparando ejecución manual y automatizada.",
+      "Reducción de esfuerzo operativo, con ventaja creciente en escenarios que exigen más comandos.",
+      "Evidencia de un nuevo desafío: el mantenimiento de plantillas específicas crece con fabricantes, servicios y escenarios."
     ],
-    fit: "Etapa de consolidacion arquitectonica y transicion metodologica. Mantiene el eje estado deseado -> estado operacional, pero la capa de traduccion deja de ser un detalle interno y pasa a ser objeto de investigacion. Ese desplazamiento motiva directamente el uso posterior de DSMs, modelos de lenguaje y evaluacion semantica."
+    fit: "Etapa de consolidación arquitectónica y transición metodológica. Mantiene el eje estado deseado -> estado operacional, pero la capa de traducción deja de ser un detalle interno y pasa a ser objeto de investigación. Ese desplazamiento motiva directamente el uso posterior de DSMs, modelos de lenguaje y evaluación semántica."
   },
   {
     id: 3, year: "2025", venue: "SBSeg 2025", venueFull: "SBSeg 2025",
     tag: "Firewalls", color: "p3",
-    short: "DynSecNet y automatizacion reactiva de firewalls",
-    title: "Gestion integrada y adaptativa de firewalls basada en la SSoT de la red",
-    summary: "Lleva la arquitectura al dominio de seguridad: politicas de firewall como estado deseado, con reactividad a eventos operativos y de seguridad.",
+    seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbseg-2025/",
+    short: "DynSecNet y automatización reactiva de firewalls",
+    title: "Gestión integrada y adaptativa de firewalls basada en la SSoT de la red",
+    summary: "Lleva la arquitectura al dominio de seguridad: políticas de firewall como estado deseado, con reactividad a eventos operativos y de seguridad.",
     objectives: [
-      "Aplicar la cadena estado deseado-traduccion-ejecucion a politicas de firewall.",
-      "Introducir operacion orientada a eventos (reactividad operativa, no autonomia predictiva).",
-      "Mantener las politicas de seguridad vinculadas a la Fuente de Verdad, favoreciendo trazabilidad e inspeccion."
+      "Aplicar la cadena estado deseado-traducción-ejecución a políticas de firewall.",
+      "Introducir operación orientada a eventos (reactividad operativa, no autonomía predictiva).",
+      "Mantener las políticas de seguridad vinculadas a la Fuente de Verdad, favoreciendo trazabilidad e inspección."
     ],
     tools: [
-      { name: "DynSecNet", desc: "Solucion en capas (Fuente Unica de Verdad, control, traduccion, ejecucion) que reacciona a eventos registrados en la SSoT o notificados por sistemas externos y aplica reglas en los firewalls.", repo: null }
+      { name: "DynSecNet", desc: "Solución en capas (Fuente Única de Verdad, control, traducción, ejecución) que reacciona a eventos registrados en la SSoT o notificados por sistemas externos y aplica reglas en los firewalls.", repo: null }
     ],
     results: [
-      "Escenario 1: la activacion de un nuevo servicio genera automaticamente una regla de liberacion en el firewall.",
-      "Escenario 2: un evento de trafico anomalo dispara una regla de bloqueo, simulando mitigacion reactiva de denegacion de servicio.",
-      "Demostracion de que la misma arquitectura modular se aplica a un dominio sensible, donde el tiempo de reaccion y la coherencia son criticos."
+      "Escenario 1: la activación de un nuevo servicio genera automáticamente una regla de liberación en el firewall.",
+      "Escenario 2: un evento de tráfico anómalo dispara una regla de bloqueo, simulando mitigación reactiva de denegación de servicio.",
+      "Demostración de que la misma arquitectura modular se aplica a un dominio sensible, donde el tiempo de reacción y la coherencia son críticos."
     ],
-    fit: "Amplia el alcance de la arquitectura mas alla de interfaces, direcciones y VLANs, alcanzando politicas de seguridad. Introduce la reactividad a eventos en la trayectoria y refuerza trazabilidad y separacion de responsabilidades, preocupaciones que se vuelven centrales en las fases siguientes."
+    fit: "Amplía el alcance de la arquitectura más allá de interfaces, direcciones y VLANs, alcanzando políticas de seguridad. Introduce la reactividad a eventos en la trayectoria y refuerza trazabilidad y separación de responsabilidades, preocupaciones que se vuelven centrales en las fases siguientes."
   },
   {
     id: 4, year: "2025", venue: "ERRC 2025", venueFull: "XXII Escola Regional de Redes de Computadores (ERRC 2025)",
     tag: "DSM + LLM", color: "p4",
-    short: "Net2d-LLM, DSMs y ejecucion en Network Digital Twin",
-    title: "Net2d-LLM: traduciendo intenciones estructuradas de red en CLI con LLMs y ejecucion en Network Digital Twin",
-    summary: "Gira hacia la capa de traduccion: introduce DSMs como contrato intermedio e investiga modelos de lenguaje para traducir DSM en CLI.",
+    short: "Net2d-LLM, DSMs y ejecución en Network Digital Twin",
+    title: "Net2d-LLM: traduciendo intenciones estructuradas de red en CLI con LLMs y ejecución en Network Digital Twin",
+    summary: "Gira hacia la capa de traducción: introduce DSMs como contrato intermedio e investiga modelos de lenguaje para traducir DSM en CLI.",
     objectives: [
-      "Introducir DSMs (Desired State Models) como representacion estructurada del estado deseado.",
+      "Introducir DSMs (Desired State Models) como representación estructurada del estado deseado.",
       "Investigar la viabilidad de usar modelos de lenguaje para traducir DSM en comandos CLI.",
-      "Evaluar las configuraciones generadas ejecutandolas en un Network Digital Twin."
+      "Evaluar las configuraciones generadas ejecutándolas en un Network Digital Twin."
     ],
     tools: [
-      { name: "Net2d-LLM", desc: "Pipeline reproducible DSM -> prompt -> LLM -> CLI -> ejecucion en Network Digital Twin, en una sola pasada (sin ciclos automaticos de correccion).", repo: null }
+      { name: "Net2d-LLM", desc: "Pipeline reproducible DSM -> prompt -> LLM -> CLI -> ejecución en Network Digital Twin, en una sola pasada (sin ciclos automáticos de corrección).", repo: null }
     ],
     results: [
-      "Comparacion de diferentes modelos de lenguaje bajo condiciones equivalentes (latencia, uso de tokens, eficiencia y consistencia).",
-      "Demostracion de la viabilidad inicial de la traduccion DSM-CLI con LLMs en operaciones de Capa 2.",
-      "Preservacion de artefactos de ejecucion (DSMs, prompts, respuestas, comandos, retornos y metricas) para analisis posterior."
+      "Comparación de diferentes modelos de lenguaje bajo condiciones equivalentes (latencia, uso de tokens, eficiencia y consistencia).",
+      "Demostración de la viabilidad inicial de la traducción DSM-CLI con LLMs en operaciones de Capa 2.",
+      "Preservación de artefactos de ejecución (DSMs, prompts, respuestas, comandos, retornos y métricas) para análisis posterior."
     ],
-    fit: "Transicion de la automatizacion basada en plantillas hacia la investigacion sistematica de la traduccion DSM-CLI con LLMs. El DSM pasa a funcionar como contrato intermedio entre estado deseado y configuracion, idea central de las fases finales. Tambien expone la brecha: aun falta evaluacion semantica independiente."
+    fit: "Transición de la automatización basada en plantillas hacia la investigación sistemática de la traducción DSM-CLI con LLMs. El DSM pasa a funcionar como contrato intermedio entre estado deseado y configuración, idea central de las fases finales. También expone la brecha: aún falta evaluación semántica independiente."
   },
   {
-    id: 5, year: "2026", venue: "SBRC 2026", venueFull: "Anais Estendidos do SBRC 2026: Salon de Herramientas (enviado)",
-    tag: "Evaluacion semantica", color: "p5",
-    short: "dsm2cli y evaluacion semantica independiente",
-    title: "dsm2cli: un pipeline observable para traducir intenciones de red en CLI multivendor con evaluacion semantica independiente",
-    summary: "Posicion central de la investigacion: separa traduccion de evaluacion. Generar comandos plausibles no basta; jueces independientes verifican si la CLI preserva la intencion del DSM.",
+    id: 5, year: "2026", venue: "SBRC 2026", venueFull: "Anais Estendidos do SBRC 2026: Salón de Herramientas (enviado)",
+    tag: "Evaluación semántica", color: "p5",
+    seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2026/",
+    short: "dsm2cli y evaluación semántica independiente",
+    title: "dsm2cli: un pipeline observable para traducir intenciones de red en CLI multivendor con evaluación semántica independiente",
+    summary: "Posición central de la investigación: separa traducción de evaluación. Generar comandos plausibles no basta; jueces independientes verifican si la CLI preserva la intención del DSM.",
     objectives: [
-      "Separar explicitamente la etapa de traduccion de la etapa de evaluacion semantica.",
+      "Separar explícitamente la etapa de traducción de la etapa de evaluación semántica.",
       "Introducir evaluadores (jueces) independientes que analizan la adherencia entre DSM y CLI generada.",
-      "Producir artefactos observables: votos, veredictos, evidencias de trazabilidad y telemetria."
+      "Producir artefactos observables: votos, veredictos, evidencias de trazabilidad y telemetría."
     ],
     tools: [
-      { name: "dsm2cli", desc: "Pipeline modular y verificable con Web API e interfaz web. Recibe dispositivo-objetivo, DSM, modelo traductor y jueces; devuelve CLI, votos, veredicto agregado, evidencias y telemetria.", repo: REPOS.dsm2cli }
+      { name: "dsm2cli", desc: "Pipeline modular y verificable con Web API e interfaz web. Recibe dispositivo-objetivo, DSM, modelo traductor y jueces; devuelve CLI, votos, veredicto agregado, evidencias y telemetría.", repo: REPOS.dsm2cli }
     ],
     results: [
-      "Evaluacion en seis escenarios multivendor, cuatro configuraciones de pipeline y 72 ejecuciones.",
-      "Exposicion de fallos semanticos que quedan ocultos en flujos basados solo en la generacion de comandos.",
-      "Analisis de trade-offs entre robustez, costo y latencia, bajo un contrato unificado."
+      "Evaluación en seis escenarios multivendor, cuatro configuraciones de pipeline y 72 ejecuciones.",
+      "Exposición de fallos semánticos que quedan ocultos en flujos basados solo en la generación de comandos.",
+      "Análisis de trade-offs entre robustez, costo y latencia, bajo un contrato unificado."
     ],
-    fit: "Posicion central: conecta DSM, traduccion multivendor, LLMs, evaluacion semantica, trazabilidad y reproducibilidad. La traduccion se vuelve etapa observable, comparable e inspeccionable, acercando Net2d a una plataforma de evaluacion y no solo de ejecucion. Prepara el benchmark de la fase siguiente."
+    fit: "Posición central: conecta DSM, traducción multivendor, LLMs, evaluación semántica, trazabilidad y reproducibilidad. La traducción se vuelve etapa observable, comparable e inspeccionable, acercando Net2d a una plataforma de evaluación y no solo de ejecución. Prepara el benchmark de la fase siguiente."
   },
   {
     id: 6, year: "2026", venue: "WIARC 2026", venueFull: "WIARC 2026 (enviado)",
     tag: "Benchmark", color: "p6",
-    short: "dsm2cli-bench y benchmark semantico reproducible",
-    title: "Un benchmark semantico reproducible para traduccion DSM-CLI multivendor",
-    summary: "Cierre experimental: transforma la evaluacion en un benchmark reproducible, con matriz controlada de traductores, fabricantes, casos de uso y repeticiones.",
+    short: "dsm2cli-bench y benchmark semántico reproducible",
+    title: "Un benchmark semántico reproducible para traducción DSM-CLI multivendor",
+    summary: "Cierre experimental: transforma la evaluación en un benchmark reproducible, con matriz controlada de traductores, fabricantes, casos de uso y repeticiones.",
     objectives: [
-      "Transformar la evaluacion de la traduccion DSM-CLI en un benchmark semantico reproducible.",
-      "Definir una matriz experimental controlada con jueces fijos y taxonomia de fallos.",
+      "Transformar la evaluación de la traducción DSM-CLI en un benchmark semántico reproducible.",
+      "Definir una matriz experimental controlada con jueces fijos y taxonomía de fallos.",
       "Evaluar no solo correctitud, sino estabilidad, concordancia entre jueces, sensibilidad al fabricante, costo y latencia."
     ],
     tools: [
       { name: "dsm2cli-bench", desc: "Marco que orquesta ejecuciones contra la API de dsm2cli, organiza escenarios, perfiles y manifests, y consolida resultados agregados.", repo: REPOS.bench },
-      { name: "wiarc2026-experiment", desc: "Paquete de reproducibilidad con la definicion del benchmark congelada, salidas crudas, figuras y metadatos del experimento WIARC 2026.", repo: REPOS.wiarc }
+      { name: "wiarc2026-experiment", desc: "Paquete de reproducibilidad con la definición del benchmark congelada, salidas crudas, figuras y metadatos del experimento WIARC 2026.", repo: REPOS.wiarc }
     ],
     results: [
       "Protocolo con 3 fabricantes, 5 casos de uso, 5 traductores y 10 repeticiones por celda: 750 ejecuciones, con panel fijo de 3 jueces.",
-      "Analisis multidimensional que revela efectos ocultos en metricas agregadas (estabilidad, divergencia entre jueces, costo).",
-      "Hallazgo relevante: concentracion de fallos semanticos en escenarios Huawei VRP, con hipotesis ligada a documentacion tecnica predominantemente en chino."
+      "Análisis multidimensional que revela efectos ocultos en métricas agregadas (estabilidad, divergencia entre jueces, costo).",
+      "Hallazgo relevante: concentración de fallos semánticos en escenarios Huawei VRP, con hipótesis ligada a documentación técnica predominantemente en chino."
     ],
-    fit: "Cierre experimental de la trayectoria. Retoma Fuente de Verdad de la Red, DSMs, traduccion multivendor, evaluacion semantica y reproducibilidad, articulandolos en un protocolo de benchmark. Consolida el punto de mayor madurez de la capa de traduccion y ofrece base reproducible y extensible para estudios futuros."
+    fit: "Cierre experimental de la trayectoria. Retoma Fuente de Verdad de la Red, DSMs, traducción multivendor, evaluación semántica y reproducibilidad, articulándolos en un protocolo de benchmark. Consolida el punto de mayor madurez de la capa de traducción y ofrece base reproducible y extensible para estudios futuros."
   }
 ];
 
@@ -549,6 +570,7 @@ PHASES.en = [
   {
     id: 2, year: "2025", venue: "SBRC-SF 2025", venueFull: "SBRC 2025 Tools Track",
     tag: "SSoT", color: "p2",
+    seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2025/",
     short: "TrueState-SNA and SSoT-based generalization",
     title: "TrueState-SNA: an SSoT-based solution for heterogeneous network automation",
     summary: "Generalizes and names the architecture: an open, modular and extensible solution based on a Single Source of Truth (SSoT), where translation gains its own weight.",
@@ -570,6 +592,7 @@ PHASES.en = [
   {
     id: 3, year: "2025", venue: "SBSeg 2025", venueFull: "SBSeg 2025",
     tag: "Firewalls", color: "p3",
+    seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbseg-2025/",
     short: "DynSecNet and reactive firewall automation",
     title: "Integrated and adaptive firewall management based on the network SSoT",
     summary: "Brings the architecture to the security domain: firewall policies as desired state, with reactivity to operational and security events.",
@@ -612,6 +635,7 @@ PHASES.en = [
   {
     id: 5, year: "2026", venue: "SBRC 2026", venueFull: "SBRC 2026 Extended Proceedings: Tools Track (submitted)",
     tag: "Semantic assessment", color: "p5",
+    seals: ["D", "F", "S", "R"], evalUrl: "https://artifact-eval.github.io/pt/sbrc-2026/",
     short: "dsm2cli and independent semantic assessment",
     title: "dsm2cli: an observable pipeline for translating network intents into multivendor CLI with independent semantic assessment",
     summary: "The central position of the research: it separates translation from assessment. Plausible commands are not enough; independent judges check whether the CLI preserves the DSM intent.",

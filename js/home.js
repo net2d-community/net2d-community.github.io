@@ -30,18 +30,18 @@
     const L = {
       pt: { nsot: "Fonte de Verdade da Rede", nsotSub: "NSoT / Netbox · estado desejado",
             orch: "net2d", orchSub: "Orquestrador logicamente centralizado · cria PipelineRun",
-            artifacts: "Repositorio de artefatos", artifactsSub: "CLI gerada · votos · vereditos · evidencias · telemetria",
-            devices: "Dispositivos e servicos de rede", devicesSub: "Cisco NX-OS · Huawei VRP · Arista EOS · Kea DHCP",
-            event: "evento / intencao", apply: "aplica comandos",
-            s1: "NSoT → DSM", s2: "DSM → CLI + avaliacao", s3: "CLI → dispositivo",
-            legend: "Clique em um bloco ou badge para abrir a fase", contrib: "contribuicao por fase" },
+            artifacts: "Repositório de artefatos", artifactsSub: "CLI gerada · votos · vereditos · evidências · telemetria",
+            devices: "Dispositivos e serviços de rede", devicesSub: "Cisco NX-OS · Huawei VRP · Arista EOS · Kea DHCP",
+            event: "evento / intenção", apply: "aplica comandos",
+            s1: "NSoT → DSM", s2: "DSM → CLI + avaliação", s3: "CLI → dispositivo",
+            legend: "Clique em um bloco ou badge para abrir a fase", contrib: "contribuição por fase" },
       es: { nsot: "Fuente de Verdad de la Red", nsotSub: "NSoT / Netbox · estado deseado",
-            orch: "net2d", orchSub: "Orquestador logicamente centralizado · crea PipelineRun",
-            artifacts: "Repositorio de artefactos", artifactsSub: "CLI generada · votos · veredictos · evidencias · telemetria",
+            orch: "net2d", orchSub: "Orquestador lógicamente centralizado · crea PipelineRun",
+            artifacts: "Repositorio de artefactos", artifactsSub: "CLI generada · votos · veredictos · evidencias · telemetría",
             devices: "Dispositivos y servicios de red", devicesSub: "Cisco NX-OS · Huawei VRP · Arista EOS · Kea DHCP",
-            event: "evento / intencion", apply: "aplica comandos",
-            s1: "NSoT → DSM", s2: "DSM → CLI + evaluacion", s3: "CLI → dispositivo",
-            legend: "Haz clic en un bloque o badge para abrir la fase", contrib: "contribucion por fase" },
+            event: "evento / intención", apply: "aplica comandos",
+            s1: "NSoT → DSM", s2: "DSM → CLI + evaluación", s3: "CLI → dispositivo",
+            legend: "Haz clic en un bloque o badge para abrir la fase", contrib: "contribución por fase" },
       en: { nsot: "Network Source of Truth", nsotSub: "NSoT / Netbox · desired state",
             orch: "net2d", orchSub: "Logically centralized orchestrator · creates PipelineRun",
             artifacts: "Artifact repository", artifactsSub: "generated CLI · votes · verdicts · evidence · telemetry",
@@ -130,10 +130,10 @@
     // ---- net2d orchestrator (band top) ----
     const orch = node({
       x: 90, y: 180, w: 800, h: 70, title: L.orch, sub: L.orchSub, color: "#818cf8",
-      fill: "#1a1f44", stroke: "#3b3f86", sw: 2, mono: true, phase: 1, tip: "P1-P2: fundacao arquitetural e orquestracao",
+      fill: "#1a1f44", stroke: "#3b3f86", sw: 2, mono: true, phase: 1, tip: "P1-P2: fundação arquitetural e orquestração",
       badges: [
         { id: 1, c: "p1", tip: "P1 · ERRC 2024: arquitetura inicial em camadas" },
-        { id: 2, c: "p2", tip: "P2 · SBRC-SF 2025: generalizacao SSoT" },
+        { id: 2, c: "p2", tip: "P2 · SBRC-SF 2025: generalização SSoT" },
         { id: 3, c: "p3", tip: "P3 · SBSeg 2025: reatividade a eventos (DynSecNet)" }
       ]
     });
@@ -143,16 +143,16 @@
 
     // ---- specialized services row ----
     const sy = 300, sh = 80;
-    const s1 = node({ x: 90, y: sy, w: 240, h: sh, title: "nsot2dsm", sub: L.s1, color: "#22d3ee", mono: true, phase: 4, tip: "Normalizacao NSoT -> DSM (conceito de DSM em P4)",
-      badges: [{ id: 4, c: "p4", tip: "P4 · ERRC 2025: DSM como contrato intermediario" }] });
-    const s2 = node({ x: 370, y: sy, w: 240, h: sh, title: "dsm2cli", sub: L.s2, color: "#34d399", mono: true, phase: 5, tip: "Traducao DSM->CLI + avaliacao semantica",
+    const s1 = node({ x: 90, y: sy, w: 240, h: sh, title: "nsot2dsm", sub: L.s1, color: "#22d3ee", mono: true, phase: 4, tip: "Normalização NSoT -> DSM (conceito de DSM em P4)",
+      badges: [{ id: 4, c: "p4", tip: "P4 · ERRC 2025: DSM como contrato intermediário" }] });
+    const s2 = node({ x: 370, y: sy, w: 240, h: sh, title: "dsm2cli", sub: L.s2, color: "#34d399", mono: true, phase: 5, tip: "Tradução DSM->CLI + avaliação semântica",
       badges: [
-        { id: 4, c: "p4", tip: "P4 · ERRC 2025: traducao DSM->CLI com LLMs" },
-        { id: 5, c: "p5", tip: "P5 · SBRC 2026: avaliacao semantica independente" },
-        { id: 6, c: "p6", tip: "P6 · WIARC 2026: benchmark reprodutivel" }
+        { id: 4, c: "p4", tip: "P4 · ERRC 2025: tradução DSM->CLI com LLMs" },
+        { id: 5, c: "p5", tip: "P5 · SBRC 2026: avaliação semântica independente" },
+        { id: 6, c: "p6", tip: "P6 · WIARC 2026: benchmark reprodutível" }
       ] });
-    const s3 = node({ x: 650, y: sy, w: 240, h: sh, title: "cli2exec", sub: L.s3, color: "#fbbf24", mono: true, phase: 3, tip: "Execucao controlada nos dispositivos",
-      badges: [{ id: 3, c: "p3", tip: "P3 · SBSeg 2025: execucao reativa de politicas" }] });
+    const s3 = node({ x: 650, y: sy, w: 240, h: sh, title: "cli2exec", sub: L.s3, color: "#fbbf24", mono: true, phase: 3, tip: "Execução controlada nos dispositivos",
+      badges: [{ id: 3, c: "p3", tip: "P3 · SBSeg 2025: execução reativa de políticas" }] });
 
     // orch -> services
     arrow(s1.cx, orch.bottom, s1.cx, s1.y, "1");
@@ -210,8 +210,8 @@
     // pilha de servicos no meio
     const services = [
       { y: 100, name: "net2d", sub: "orquestrador" },
-      { y: 162, name: "nsot2dsm  ·  dsm2cli  ·  cli2exec", sub: "servicos" },
-      { y: 224, name: "DSM → CLI → exec", sub: "pipeline observavel" }
+      { y: 162, name: "nsot2dsm  ·  dsm2cli  ·  cli2exec", sub: "serviços" },
+      { y: 224, name: "DSM → CLI → exec", sub: "pipeline observável" }
     ];
     services.forEach(function (s) {
       const g = svg("g");
@@ -250,6 +250,13 @@
       card.appendChild(meta);
       card.appendChild(el("h3", { text: p.short }));
       card.appendChild(el("p", { text: p.summary }));
+      if (p.seals && p.seals.length) {
+        const sr = el("div", { class: "tl-seals", attrs: { title: ui.seals.title, "aria-label": ui.seals.title } });
+        p.seals.forEach(function (s) {
+          sr.appendChild(el("span", { class: "seal seal-" + s.toLowerCase(), text: s, attrs: { title: ui.seals.names[s] } }));
+        });
+        card.appendChild(sr);
+      }
       const go = { pt: "Ver detalhes da fase →", es: "Ver detalles de la fase →", en: "See phase details →" }[lang];
       card.appendChild(el("div", { class: "tl-go", text: go }));
       item.appendChild(node);

@@ -50,6 +50,28 @@
     ] });
     metaline.style.setProperty("--c", "var(--" + p.color + ")");
     hw.appendChild(metaline);
+
+    // Selos de avaliação de artefatos (quando a fase os possui)
+    if (p.seals && p.seals.length) {
+      const sealsRow = el("div", { class: "phase-seals" });
+      sealsRow.appendChild(el("span", { class: "seals-label", text: ui.seals.title }));
+      const chips = el("div", { class: "seal-chips" });
+      p.seals.forEach(function (s) {
+        chips.appendChild(el("span", {
+          class: "seal seal-" + s.toLowerCase(), text: s,
+          attrs: { title: ui.seals.names[s], "aria-label": ui.seals.names[s] }
+        }));
+      });
+      sealsRow.appendChild(chips);
+      if (p.evalUrl) {
+        sealsRow.appendChild(el("a", {
+          class: "seal-link", href: p.evalUrl, text: ui.seals.link,
+          attrs: { target: "_blank", rel: "noopener" }
+        }));
+      }
+      hw.appendChild(sealsRow);
+    }
+
     hero.appendChild(hw);
     app.appendChild(hero);
 

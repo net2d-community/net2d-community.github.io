@@ -346,6 +346,35 @@ section { padding: 46px 0; }
 .note h3 { margin: 0 0 10px; font-size: 1.1rem; }
 .note p { margin: 0; color: var(--text-soft); font-size: 0.95rem; }
 
+/* ----------------------------- Artifact seals ----------------------------- */
+.phase-seals { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-top: 18px; }
+.seals-label { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-dim); }
+.seal-chips { display: inline-flex; gap: 7px; }
+.seal {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 27px; height: 27px; border-radius: 8px; cursor: help;
+  font-family: var(--mono); font-weight: 800; font-size: 0.82rem; color: #06121f;
+  background: var(--accent-3); border: 1px solid rgba(0, 0, 0, 0.22);
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.18);
+}
+.seal-d { background: var(--p1); }
+.seal-f { background: var(--p4); color: #fff; }
+.seal-s { background: var(--p5); }
+.seal-r { background: var(--p6); }
+.seal-link { font-size: 0.85rem; font-weight: 650; }
+
+.tl-seals { display: inline-flex; gap: 6px; margin-top: 12px; }
+.tl-seals .seal { width: 22px; height: 22px; border-radius: 6px; font-size: 0.72rem; cursor: default; }
+
+/* ----------------------------- Repositorios em destaque ----------------------------- */
+.repo-link {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 7px 14px; border-radius: 999px; font-weight: 650; color: var(--text);
+  background: var(--bg-soft); border: 1px solid var(--border);
+  transition: border-color .15s ease, color .15s ease, transform .12s ease, box-shadow .2s ease;
+}
+.repo-link:hover { text-decoration: none; color: var(--accent); border-color: var(--accent); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(56, 189, 248, 0.16); }
+
 /* ----------------------------- Footer ----------------------------- */
 .site-footer { border-top: 1px solid var(--border-soft); margin-top: 40px; padding: 34px 0; color: var(--text-dim); font-size: 0.9rem; }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center; }
